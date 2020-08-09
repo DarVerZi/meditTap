@@ -2,11 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import FullWidthTabs from './components/TabPanel';
+import MenuAppBar from './components/MenuAppBar';
+import CenteredGrid from './components/CenteredGrid';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+       <MenuAppBar/>
+       
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,8 +22,9 @@ function App() {
           <div className="pru_body">
             <FullWidthTabs/>
             <h1>Hola Mary</h1>
-
+            <CenteredGrid/>
           </div>
+
       </body>
       
       <footer className='App-footer'>
