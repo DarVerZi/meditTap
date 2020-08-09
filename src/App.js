@@ -13,7 +13,7 @@ function App() {
         </div>
         <MenuAppBar/>
         
-        <h1>hola mundo</h1>
+        {/*<h1>hola mundo</h1>*/}
         
       </header>
       
