@@ -20,7 +20,11 @@ function App() {
         </a>
         <h1>hola mundo</h1>
       </header>
-     
+      <footer className='App-footer'>
+        <p>
+          Footer de prueba
+        </p>
+      </footer> 
 
     
     </div>
