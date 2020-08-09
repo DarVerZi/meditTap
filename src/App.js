@@ -8,11 +8,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       <MenuAppBar/>
-       
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div>
+        <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png"/>
+        </div>
+        <MenuAppBar/>
+        
         <h1>hola mundo</h1>
         
       </header>
