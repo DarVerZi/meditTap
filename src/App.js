@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SimpleMenu from './components/SimpleMenu';
+import FullWidthTabs from './components/TabPanel';
 
 function App() {
   return (
@@ -10,9 +10,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-       
+        <FullWidthTabs/>
         <h1>hola mundo</h1>
-        <SimpleMenu/>
+        
       </header>
       
       <body className="App-body">
