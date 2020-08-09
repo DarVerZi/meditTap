@@ -71,9 +71,10 @@ export default function FullWidthTabs() {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Dario" {...a11yProps(0)} />
-          <Tab label="Gian" {...a11yProps(1)} />
-          <Tab label="Mary" {...a11yProps(2)} />
+          <Tab label="quienes somos" {...a11yProps(0)} />
+          <Tab label="donde estamos" {...a11yProps(1)} />
+          <Tab label="noticias relevantes" {...a11yProps(2)} />
+          <Tab label="contacto" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -90,6 +91,9 @@ Este contrato describe los términos y condiciones generales (los "Términos y C
           Holaaaaaa!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
+          AJDJVHSDUIHVDSFHIO
+        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}>
           AJDJVHSDUIHVDSFHIO
         </TabPanel>
       </SwipeableViews>
