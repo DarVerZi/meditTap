@@ -87,7 +87,7 @@ Este contrato describe los términos y condiciones generales (los "Términos y C
           </p7>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          que esté relacionada con su etiqueta
+          Holaaaaaa!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           y su botón para acceder a la sección
