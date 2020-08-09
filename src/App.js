@@ -10,14 +10,13 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <FullWidthTabs/>
         <h1>hola mundo</h1>
         
       </header>
       
       <body className="App-body">
           <div className="pru_body">
-          
+            <FullWidthTabs/>
             <h1>Hola Mary</h1>
 
           </div>
