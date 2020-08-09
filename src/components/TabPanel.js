@@ -85,7 +85,7 @@ export default function FullWidthTabs() {
           Aquí se puede poner cualquier cosa
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          que esté relacionada con su etiqueta
+          Holaaaaaa!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           y su botón para acceder a la sección
