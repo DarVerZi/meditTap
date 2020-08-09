@@ -15,8 +15,8 @@ function App() {
       </header>
       
       <body className="App-body">
+          <FullWidthTabs/>
           <div className="pru_body">
-            <FullWidthTabs/>
             <h1>Hola Mary</h1>
 
           </div>
