@@ -88,7 +88,7 @@ export default function FullWidthTabs() {
           Holaaaaaa!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          y su botón para acceder a la sección
+          AJDJVHSDUIHVDSFHIO
         </TabPanel>
       </SwipeableViews>
     </div>
