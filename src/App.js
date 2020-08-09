@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import FullWidthTabs from './components/TabPanel';
 import MenuAppBar from './components/MenuAppBar';
 import CenteredGrid from './components/CenteredGrid';
 
@@ -19,7 +18,6 @@ function App() {
       </header>
       
       <body className="App-body">
-          <FullWidthTabs/>
           <div className="pru_body">
             <h1>Hola Mary</h1>
             <CenteredGrid/>
