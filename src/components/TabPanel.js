@@ -72,7 +72,7 @@ export default function FullWidthTabs() {
           aria-label="full width tabs example"
         >
           <Tab label="quienes somos" {...a11yProps(0)} />
-          <Tab label="noticias relevantes" {...a11yProps(1)} />
+          <Tab label="nuestras especialidades" {...a11yProps(1)} />
           <Tab label="donde estamos" {...a11yProps(2)} />
           <Tab label="contacto" {...a11yProps(3)} />
         </Tabs>
@@ -88,12 +88,9 @@ Este contrato describe los términos y condiciones generales (los "Términos y C
           </p7>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Holaaaaaa!!
+        Hola!!!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          AJDJVHSDUIHVDSFHIO
-        </TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}>
           AJDJVHSDUIHVDSFHIO
         </TabPanel>
       </SwipeableViews>

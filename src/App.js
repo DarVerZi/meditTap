@@ -6,6 +6,14 @@ import MenuAppBar from './components/MenuAppBar';
 //import CenteredGrid from './components/CenteredGrid';
 import Router from './Router';
 
+import CenteredGrid from './components/CenteredGrid';
+import Recetas from './components/Recetas';
+import HistoriaClinica from './components/HistoriaClinica';
+import Turnos from './components/Turnos';
+
+import { Container } from '@material-ui/core';
+import FullWidthTabs from './components/TabPanel';
+import CarouselNov from './components/CarouselNov';
 
 function App() {
   return (
@@ -21,7 +29,9 @@ function App() {
       </header>
       
       <body className="App-body">
+          {/*<temporal>Hola Mary</temporal*/}  
           <div className="pru_body">
+
             <h1>Hola Mary</h1>
             
             <Router/>
@@ -29,9 +39,12 @@ function App() {
               <CenteredGrid/>
             */}  
             
-          
-          
-          
+            <CarouselNov/>
+            <CenteredGrid/>
+            <Recetas/>
+            <HistoriaClinica/>
+            <Turnos/>
+
           </div>
       </body>
       
