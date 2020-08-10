@@ -12,7 +12,11 @@
     "bootstrap": "^4.5.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+<<<<<<< HEAD
     "react-script": "^2.0.5",
+=======
+    "react-router-dom": "^5.2.0",
+>>>>>>> 8ec87bde41593a726a2db12012e048d65f41c623
     "react-scripts": "^3.4.1",
     "react-swipeable-views": "^0.13.9"
   },

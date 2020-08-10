@@ -12,9 +12,10 @@ import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
+    backgroundColor: "#991B1E",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -47,13 +48,12 @@ export default function MenuAppBar() {
     
       <div className={classes.root}>
 
-        <AppBar position="static">
+        <AppBar position="static" className={classes.root}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" disabled>
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              Photos
             </Typography>
             {auth && (
               <div>

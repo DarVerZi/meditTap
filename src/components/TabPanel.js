@@ -43,7 +43,7 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#F6ECEA"
   },
 }));
 
@@ -62,18 +62,18 @@ export default function FullWidthTabs() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static" color="#F6ECEA">
         <Tabs
           value={value}
           onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
+          indicatorColor="secondary"
+          textColor="secondary"
           variant="fullWidth"
           aria-label="full width tabs example"
         >
           <Tab label="quienes somos" {...a11yProps(0)} />
-          <Tab label="donde estamos" {...a11yProps(1)} />
-          <Tab label="noticias relevantes" {...a11yProps(2)} />
+          <Tab label="nuestras especialidades" {...a11yProps(1)} />
+          <Tab label="donde estamos" {...a11yProps(2)} />
           <Tab label="contacto" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
@@ -88,12 +88,9 @@ Este contrato describe los términos y condiciones generales (los "Términos y C
           </p7>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Holaaaaaa!!
+        Hola!!!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          AJDJVHSDUIHVDSFHIO
-        </TabPanel>
-        <TabPanel value={value} index={3} dir={theme.direction}>
           AJDJVHSDUIHVDSFHIO
         </TabPanel>
       </SwipeableViews>
