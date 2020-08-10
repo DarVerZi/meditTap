@@ -4,7 +4,7 @@ class MiComponente extends React.Component {
 
     render () {
         return (
-           <h1>"Mi componente"</h1>     
+           <h1>"Falta componente"</h1>     
         )
     };
 

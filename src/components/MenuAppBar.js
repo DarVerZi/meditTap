@@ -11,6 +11,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import SimpleMenu from './SimpleMenu';
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,9 +53,11 @@ export default function MenuAppBar() {
 
         <AppBar position="static" className={classes.root}>
           <Toolbar>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" disabled>
-              <MenuIcon />
-            </IconButton>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              {/*<MenuIcon />*/}
+              <SimpleMenu />
+              </IconButton>
+
             <Typography variant="h6" className={classes.title}>
             </Typography>
             {auth && (
