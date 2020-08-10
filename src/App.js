@@ -13,7 +13,6 @@ import Turnos from './components/Turnos';
 
 import { Container } from '@material-ui/core';
 import FullWidthTabs from './components/TabPanel';
-import CarouselNov from './components/CarouselNov';
 
 function App() {
   return (
@@ -29,9 +28,9 @@ function App() {
       </header>
       
       <body className="App-body">
-          {/*<temporal>Hola Mary</temporal*/}  
           <temporal>Hola Mary</temporal>  
           <div className="pru_body">
+<<<<<<< HEAD
 
             <h1>Hola Mary</h1>
             
@@ -41,6 +40,8 @@ function App() {
             */}  
             
             <CarouselNov/>
+=======
+>>>>>>> parent of 8ec87bd... carousel de novedades fuera del TabPanel y cambio en el TabPanel
             <CenteredGrid/>
             <Recetas/>
             <HistoriaClinica/>
