@@ -30,6 +30,7 @@ function App() {
       
       <body className="App-body">
           {/*<temporal>Hola Mary</temporal*/}  
+          <temporal>Hola Mary</temporal>  
           <div className="pru_body">
 
             <h1>Hola Mary</h1>
