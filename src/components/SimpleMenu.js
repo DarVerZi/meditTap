@@ -1,28 +1,33 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
-import { makeStyles } from '@material-ui/core/styles';
+import { createStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import { NavLink } from 'react-router-dom';
-import { red } from '@material-ui/core/colors';
 
 /*
 function useState<S>(initialState: (() => S) | S) {
     const dispatcher = resolveDispatcher();
     return dispatcher.useState(initialState);
   }
-*/
-const useStyles = makeStyles(theme => ({
-    root: {
-        color: theme.palette.getContrastText(red[500]),
-    }
-  }));
+
+
+const myTheme = createMuiTheme({
+    overrides: {
+        MuiMenuItem: createStyles({
+            root: {
+                color: "#000000",
+            },
+        }),
+    },
+});*/
 
 export default function SimpleMenu() {
-    const classes = useStyles();
 
+    /*const classes = createStyles();*/
+    
     const [anchorEl, setAnchorEl] = React.useState(0);
-
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -30,11 +35,11 @@ export default function SimpleMenu() {
 
     const handleClose = () => {
         setAnchorEl(null);
-    };
+    };    
 
     return (
         <div>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <Button aria-controls="simple-menu" aria-haspopup="true" variant="contained" color="secondary" onClick={handleClick}>
                 Menu
       </Button>
             <Menu

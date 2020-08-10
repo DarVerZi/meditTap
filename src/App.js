@@ -9,7 +9,7 @@ import Router from './Router';
 function App() {
   return (
     <div className="App">
-
+      <div className="container-fluid">
       
       <body className="App-body">
           <div className="pru_body">        
@@ -17,6 +17,7 @@ function App() {
           </div>
       </body>
     
+    </div>
     </div>
   );
 }

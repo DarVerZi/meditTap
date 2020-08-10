@@ -19,7 +19,7 @@ class Router extends Component {
                     </div>
 
                 </header>
-
+                <body className="App-body">
                 <Switch>
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={CenteredGrid} />
@@ -30,7 +30,7 @@ class Router extends Component {
                     <Route component={Error} />
 
                 </Switch>
-
+                </body>
 
                 <footer className='App-footer'>
                     <p>
@@ -38,7 +38,7 @@ class Router extends Component {
         </p>
                 </footer>
             </BrowserRouter>
-
+        
         );
 
     }
