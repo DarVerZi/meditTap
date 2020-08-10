@@ -2,15 +2,26 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    linea: {
+      main: '#301210',
+    },
+  }
+});
 
 export default function ComboBox() {
+  const theme = createMuiTheme();
   return (
+    
     <Autocomplete
       id="combo-box-demo"
       options={top100Films}
       getOptionLabel={(option) => option.title}
       style={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Pacientes" variant="outlined" />}
+      renderInput={(params) => <TextField {...params} label="Pacientes" variant="outlined" color="linea" />}
     />
   );
 }

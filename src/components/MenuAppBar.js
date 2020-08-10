@@ -55,8 +55,40 @@ export default function MenuAppBar() {
         <AppBar position="static" className={classes.root}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              {/*<MenuIcon />*/}
-              <SimpleMenu />
+              {/*<MenuIcon />
+              <SimpleMenu />*/}
+              <div class="d-flex flex-row bd-highlight mb-3">
+              <ul class="nav">
+              <div class="p-2 bd-highlight">
+  <li class="nav-item">
+    <a class="nav-link, text-white" href="/">Home</a>
+  </li>
+  </div>
+  <div class="p-2 bd-highlight">
+  <li class="nav-item">
+    <a class="nav-link, text-white" href="/GestionDeUsuarios">Gestion De Usuarios</a>
+  </li>
+  </div>
+  <div class="p-2 bd-highlight">
+  <li class="nav-item">
+    <a class="nav-link, text-white" href="/Turnos">Turnos</a>
+  </li>
+  </div>
+  <div class="p-2 bd-highlight">
+  <li class="nav-item">
+    <a class="nav-link, text-white" href="/HistoriaClinica">Historia Clinica</a>
+  </li>
+  </div>
+  <div class="p-2 bd-highlight">
+  <li class="nav-item">
+    <a class="nav-link, text-white" href="/Recetas">Recetas</a>
+  </li>
+  </div>
+  {/*<li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>*/}
+</ul>
+</div>
               </IconButton>
 
             <Typography variant="h6" className={classes.title}>

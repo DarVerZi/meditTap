@@ -4,6 +4,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
 import MenuAppBar from './MenuAppBar';
+import IconLabelButtons from './IconLabelButtons';
+import ComboBox from './ComboBox';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,13 +33,18 @@ export default function HistoriaClinica() {
             {/*<FullWidthTabs/>*/}
           </Paper>
         </Grid>
-        {/*<Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
-        </Grid>
         <Grid item xs={3}>
+          <Paper className={classes.paper}>
+          <ComboBox/>
+          </Paper>
+        </Grid>
+        <Grid item xs={9}>
+          <Paper className={classes.paper}>
+            <h1>Aquí va la HistoriaClinica</h1>
+            <IconLabelButtons/>
+            </Paper>
+        </Grid>
+        {/*<Grid item xs={3}>
           <Paper className={classes.paper}>xs=3</Paper>
         </Grid>
         <Grid item xs={3}>
