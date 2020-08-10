@@ -3,16 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import MenuAppBar from './components/MenuAppBar';
 import CenteredGrid from './components/CenteredGrid';
-<<<<<<< HEAD
 import Recetas from './components/Recetas';
 import HistoriaClinica from './components/HistoriaClinica';
 import Turnos from './components/Turnos';
-
-=======
 import { Container } from '@material-ui/core';
 import FullWidthTabs from './components/TabPanel';
 import CarouselNov from './components/CarouselNov';
->>>>>>> 8ec87bde41593a726a2db12012e048d65f41c623
 
 function App() {
   return (
