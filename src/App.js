@@ -24,7 +24,6 @@ function App() {
           <div className="pru_body">
             <CenteredGrid/>
           </div>
-
       </body>
       
       <footer className='App-footer'>
