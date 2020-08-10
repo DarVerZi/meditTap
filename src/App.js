@@ -22,7 +22,6 @@ function App() {
             <h1>Hola Mary</h1>
             <CenteredGrid/>
           </div>
-
       </body>
       
       <footer className='App-footer'>
