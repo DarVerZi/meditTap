@@ -1,8 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Slider from './components/Slider';
 import MenuAppBar from './components/MenuAppBar';
-import CenteredGrid from './components/CenteredGrid';
+//import CenteredGrid from './components/CenteredGrid';
+import Router from './Router';
+
 
 function App() {
   return (
@@ -12,7 +15,7 @@ function App() {
         <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png"/>
         </div>
         <MenuAppBar/>
-        
+        <Slider/>
         {/*<h1>hola mundo</h1>*/}
         
       </header>
@@ -20,7 +23,15 @@ function App() {
       <body className="App-body">
           <div className="pru_body">
             <h1>Hola Mary</h1>
-            <CenteredGrid/>
+            
+            <Router/>
+            {/*
+              <CenteredGrid/>
+            */}  
+            
+          
+          
+          
           </div>
       </body>
       
