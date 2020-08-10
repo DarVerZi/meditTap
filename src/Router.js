@@ -7,7 +7,6 @@ import Recetas from './components/Recetas';
 import HistoriaClinica from './components/HistoriaClinica';
 import Error from './components/Error';
 import Turnos from './components/Turnos';
-import MenuAppBar from './components/MenuAppBar';
 
 class Router extends Component {
     render() {
@@ -18,8 +17,6 @@ class Router extends Component {
                     <div>
                         <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png" />
                     </div>
-                    <MenuAppBar />
-                    {/*<h1>hola mundo</h1>*/}
 
                 </header>
 

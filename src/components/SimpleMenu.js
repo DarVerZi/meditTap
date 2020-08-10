@@ -1,8 +1,10 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
+import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import { NavLink } from 'react-router-dom';
+import { red } from '@material-ui/core/colors';
 
 /*
 function useState<S>(initialState: (() => S) | S) {
@@ -10,8 +12,15 @@ function useState<S>(initialState: (() => S) | S) {
     return dispatcher.useState(initialState);
   }
 */
+const useStyles = makeStyles(theme => ({
+    root: {
+        color: theme.palette.getContrastText(red[500]),
+    }
+  }));
 
 export default function SimpleMenu() {
+    const classes = useStyles();
+
     const [anchorEl, setAnchorEl] = React.useState(0);
 
 
@@ -26,7 +35,7 @@ export default function SimpleMenu() {
     return (
         <div>
             <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                Open Menu
+                Menu
       </Button>
             <Menu
                 id="simple-menu"
