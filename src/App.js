@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import MenuAppBar from './components/MenuAppBar';
 import CenteredGrid from './components/CenteredGrid';
+import Recetas from './components/Recetas';
+import HistoriaClinica from './components/HistoriaClinica';
+import Turnos from './components/Turnos';
+
 
 function App() {
   return (
@@ -21,6 +25,9 @@ function App() {
           <div className="pru_body">
             <h1>Hola Mary</h1>
             <CenteredGrid/>
+            <Recetas/>
+            <HistoriaClinica/>
+            <Turnos/>
           </div>
 
       </body>
