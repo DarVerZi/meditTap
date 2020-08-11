@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
-import MenuAppBar from './MenuAppBar';
 import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
 
@@ -29,8 +28,8 @@ export default function HistoriaClinica() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <MenuAppBar/>
-            {/*<FullWidthTabs/>*/}
+            {/*<MenuAppBar/>
+            <FullWidthTabs/>*/}
           </Paper>
         </Grid>
         <Grid item xs={3}>
