@@ -14,9 +14,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import IconLabelButtons from './IconLabelButtons';
-import ComboBox from './ComboBox';
-import FormHC from './FormHC';
+import FullWidthTabs from './TabPanel';
+import CarouselNov from './CarouselNov';
 
 const drawerWidth = 240;
 
@@ -53,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function HistoriaClinica(props) {
+function ResponsiveDrawer(props) {
   const { window } = props;
   const classes = useStyles();
   const theme = useTheme();
@@ -160,14 +159,9 @@ function HistoriaClinica(props) {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <ComboBox/>      
-          </Grid>
-          <Grid item xs={12}>
-            <FormHC/>
-            </Grid>
-            <Grid item xs={12}>
-            <IconLabelButtons/>
-            </Grid>
+            <CarouselNov/>
+            <FullWidthTabs/>
+        </Grid>
         {/*<Grid item xs={6}>
           <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
@@ -194,7 +188,7 @@ function HistoriaClinica(props) {
   );
 }
 
-HistoriaClinica.propTypes = {
+ResponsiveDrawer.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -202,4 +196,4 @@ HistoriaClinica.propTypes = {
   window: PropTypes.func,
 };
 
-export default HistoriaClinica;
+export default ResponsiveDrawer;

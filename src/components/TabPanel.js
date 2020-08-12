@@ -7,6 +7,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -61,7 +62,8 @@ export default function FullWidthTabs() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className="container-fluid">
+      <div className={classes.root}>
       <AppBar position="static" color="#F6ECEA">
         <Tabs
           value={value}
@@ -94,6 +96,7 @@ Este contrato describe los términos y condiciones generales (los "Términos y C
           AJDJVHSDUIHVDSFHIO
         </TabPanel>
       </SwipeableViews>
+    </div>
     </div>
   );
 }
