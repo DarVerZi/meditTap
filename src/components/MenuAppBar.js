@@ -123,7 +123,7 @@ export default function MenuAppBar() {
                   <MenuItem
                   //containerElement={<Link to="/Login"/>}
                   primaryText="Login"
-                  onClick={<Link to="/Login"/>}
+                  onClick={handleClose}
                   >Login
                   </MenuItem>
                   <MenuItem onClick={handleClose} containerElement={<Link to="/Registrar"/>}>

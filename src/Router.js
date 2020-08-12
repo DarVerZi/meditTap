@@ -10,6 +10,7 @@ import Turnos from './components/Turnos';
 import Login from './components/Login';
 import Registrar from './components/Registrar';
 import Home1 from './components/Home1';
+import Home2 from './components/Home2';
 import CenteredGrid from './components/Home2';
 
 
@@ -26,7 +27,7 @@ class Router extends Component {
                 <Switch>
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={Home1} />
-                    <Route exact path="/home" component={CenteredGrid} />
+                    <Route exact path="/home" component={Home2} />
                     <Route exact path="/GestionDeUsuarios" component={MiComponente} />
                     <Route exact path="/Turnos" component={Turnos} />
                     <Route exact path="/HistoriaClinica" component={VistaHCMed} />

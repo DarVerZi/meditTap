@@ -122,13 +122,10 @@ export default function MenuAppBar() {
                   onClose={handleClose}
                 > 
                   <MenuItem
-                  //containerElement={<Link to="/Login"/>}
                   primaryText="Login"
-                  onClick={<Link to="/Login"/>}
-                  >Login
-                  </MenuItem>
-                  <MenuItem onClick={handleClose} containerElement={<Link to="/Registrar"/>}>
-                    Registrar
+                  onClick={handleClose}
+                  path="/"
+                  ><Container>Logout</Container>  
                   </MenuItem>
                 </Menu>
               </div>
