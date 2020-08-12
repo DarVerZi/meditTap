@@ -31,10 +31,12 @@ return (
     <div className={classes.root}>
         <div className="container-fluid">
             <div className="row">
+            {/* Barra con menú y logout */}
                 <div className="col-12">
                     <MenuAppBar/>
                     <br></br>
                 </div>
+                {/* Buscador de pacientes */}
                 <div className="col-12">
                 <div>
                     <ComboBox/>
@@ -42,6 +44,7 @@ return (
                 </div>
                 </div>
                 <div className="col-12">
+                {/* Formulario de datos personales */}
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -99,13 +102,30 @@ return (
 </form>
                 </div>
                 <div className="col-12">
-                    bloque
-                </div>
+                {/* Formulario de datos médicos */}
                 <div className="col-12">
-                    bloque
+                <div class="form-group row">
+    <div class="col-sm-6">Se encuentra Ud. en buen estado de salud?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
                 </div>
             </div>
         </div>
-        </div>
+        </div></div>
   );
 }

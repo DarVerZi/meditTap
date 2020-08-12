@@ -2,11 +2,9 @@ import React from 'react';
 export default function HCDescriptions() {
 
     return (
-        <body>
-            <div>
-                Se encuentra Ud. en buen estado de salud?
-            </div>
+        
 
+<div>
             <div>
                 Esta Ud. recibiendo tratamiento medico actualmente?
             </div>
@@ -70,6 +68,6 @@ export default function HCDescriptions() {
             <div>
                 Ha padecido Ud. alguna vez artrosis?
         </div>
-        </body>
+        </div>
     );
 }
