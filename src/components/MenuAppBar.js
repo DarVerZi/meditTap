@@ -10,8 +10,10 @@ import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
+import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
 import SimpleMenu from './SimpleMenu';
+import { Container } from '@material-ui/core';
 
 
 
@@ -118,9 +120,16 @@ export default function MenuAppBar() {
                   }}
                   open={open}
                   onClose={handleClose}
-                >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
+                > 
+                  <MenuItem
+                  //containerElement={<Link to="/Login"/>}
+                  primaryText="Login"
+                  onClick={<Link to="/Login"/>}
+                  >Login
+                  </MenuItem>
+                  <MenuItem onClick={handleClose} containerElement={<Link to="/Registrar"/>}>
+                    Registrar
+                  </MenuItem>
                 </Menu>
               </div>
             )}
