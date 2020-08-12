@@ -8,6 +8,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
+import Contacto from './Contacto';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -92,7 +93,7 @@ export default function FullWidthTabs() {
         Hola!!!!
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          AJDJVHSDUIHVDSFHIO
+          <Contacto/>
         </TabPanel>
       </SwipeableViews>
     </div>
