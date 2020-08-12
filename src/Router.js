@@ -19,8 +19,8 @@ class Router extends Component {
         return (
             <BrowserRouter>
                 <header className="App-header">
-                    <div>
-                        <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png" />
+                <div className="container" justify = "center" alignItems = "center">
+                        <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png" height="80px" width="180px"/>
                     </div>
                 </header>
                 <body className="App-body">
