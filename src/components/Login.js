@@ -11,82 +11,160 @@ import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import { withStyles } from "@material-ui/core/styles";
+//import AlertDialog from './AlertDialog';
+//import AlertDialog from './AlertDialog';
+import {withRouter} from 'react-router-dom';
+import MiComponente from './MiComponente';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+ 
 
-const useStyles = makeStyles((theme) => ({
+import {
+  Redirect
+} from "react-router-dom";
+
+ 
+
+const useStyles = theme => ({
   paper: {
-    marginTop: theme.spacing(8),
+    marginTop: theme.spacing(20),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    margin: 'auto',
   },
   avatar: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(3),
     backgroundColor: theme.palette.secondary.main,
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(16),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+  color: {
+  margin: '0% auto ',
+  // backgroundImage: 'url(https://www.hospitalitaliano.org.ar/images/minisitios/encabezado_acerca.jpg)',
+  // backgroundRepeat: 'no-repeat',
+  // backgroundSize: 'cover',
+  // backgroundPosition: 'center',
+  backgroundColor: '#151719',
+  },
+});
+class Ingreso extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+      rol: "medico",
+      rol1: "admin",
+      rol2: "secretaria",
+      rol3: "paciente",
+      isLogged: false,
+      fallo: false,
+    }
+  }
 
+ 
 
-export default function SignIn() {
-  const classes = useStyles();
+  //Capturar el mail y pwd cuando la ingresas en el estao
+  presionarBotonLogin = () => {
+      if (this.state.email==="medico@gmail.com" && this.state.password==="123456") {
+        console.log(this.state.rol)
+        this.props.history.push({
+          pathname: '/home',
+          state: {
+            rol: this.state.rol
+          }
+      });
+    } else if (this.state.email==="admin@gmail.com" && this.state.password==="123456") {
+          console.log(this.state.rol1)
+            this.props.history.push({
+              pathname: '/home',
+              state: {
+                rol1: this.state.rol1
+              }
+          });
+    }else if (this.state.email==="secretaria@gmail.com" && this.state.password==="123456"){
+          console.log(this.state.rol2)
+            this.props.history.push({
+              pathname: '/home',
+              state: {
+                rol: this.state.rol2
+              }
+            });
+    }else if (this.state.email==="paciente@gmail.com" && this.state.password==="123456"){
+            console.log(this.state.rol3)
+            this.props.history.push({
+              pathname: '/home',
+              state: {
+                rol: this.state.rol3
+              }
+            });
+    }else
+    {
+        this.setState({fallo: true})
+      }
+  };
 
+ 
 
+  cambiarTextoEmail = (event) => {
+    this.setState({
+      email: event.target.value,
+    });
+  };
+  cambiarTextoPassword = (event) => {
+    this.setState({
+      password: event.target.value,
+    });
+  };
+  render(){
+  const { classes } = this.props;
   return (
-    <Container component="main" maxWidth="xs">
+    <Grid container component="main" className={classes.color}>
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Ingresar
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
-            variant="outlined"
+            // variant="outlined"
             margin="normal"
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Correo electrónico"
             name="email"
             autoComplete="email"
+            onChange={this.cambiarTextoEmail}
             autoFocus
+            style={{
+              backgroundColor: "white"
+            }}
           />
           <TextField
-            variant="outlined"
+            // variant="outlined"
             margin="normal"
             required
             fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
+            name="contraseña"
+            label="Contraseña"
+            type="contraseña"
+            id="contraseña"
             autoComplete="current-password"
-          />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
+            onChange={this.cambiarTextoPassword}
+            style={{
+              backgroundColor: "white"
+            }}
           />
           <Button
             type="submit"
@@ -94,30 +172,24 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            href="/" 
-            /*disabled={!validateForm()}*/
-            /*onClick={funcionValidar()}*/
+            onClick={this.presionarBotonLogin}
           >
-            Sign In
+            Ingresar
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
+              <MiComponente/>
             </Grid>
             <Grid item>
-              <Link href="/Registrar" variant="body2">
-                {"Don't have an account? Sign Up"}
+              <Link href="Registro" variant="body2">
+                {"No tiene una cuenta? Registrese"}
               </Link>
             </Grid>
           </Grid>
         </form>
       </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
-    </Container>
-
+    </Grid>
   );
 }
+}
+export default withStyles(useStyles, { withTheme: true })(Ingreso);
