@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
         <div className={classes.root}>
             <Grid container spacing={3}>
                 <Grid item xs={3}>
-                    <p>Aquí va el logo chiquito en blanco (en proceso)</p>
+                    {/*<p>Aquí va el logo chiquito en blanco (en proceso)</p>*/}
                 </Grid>
                 <Grid item xs={9}>
-                    <p>Aquí va texto</p>
+                    {/*<p>Aquí va texto</p>*/}
                 </Grid>
             </Grid>
         </div>

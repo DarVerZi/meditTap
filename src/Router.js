@@ -7,7 +7,6 @@ import Recetas from './components/Recetas';
 import HistoriaClinica from './components/HistoriaClinica';
 import Error from './components/Error';
 import Turnos from './components/Turnos';
-import Footer from './components/Footer';
 import Login from './components/Login';
 import Registrar from './components/Registrar';
 import CenteredGrid from './components/CenteredGrid';
@@ -40,7 +39,6 @@ class Router extends Component {
                 </Switch>
                 </body>
                 <footer className='App-footer'>
-                    <Footer/>
                 </footer>
             </BrowserRouter>
         

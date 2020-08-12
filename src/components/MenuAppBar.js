@@ -57,8 +57,8 @@ export default function MenuAppBar() {
         <AppBar position="static" className={classes.root}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <SimpleMenu />
               {/*<MenuIcon />
-              <SimpleMenu />*/}
               <div class="d-flex flex-row bd-highlight mb-3">
               <ul class="nav">
               <div class="p-2 bd-highlight">
@@ -88,9 +88,9 @@ export default function MenuAppBar() {
   </div>
   {/*<li class="nav-item">
     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>*/}
+  </li>
 </ul>
-</div>
+</div>*/}
               </IconButton>
 
             <Typography variant="h6" className={classes.title}>

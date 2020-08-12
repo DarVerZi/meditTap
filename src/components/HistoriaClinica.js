@@ -106,7 +106,7 @@ function HistoriaClinica(props) {
 
   return (
     <div className={classes.root}>
-      <CssBaseline />
+      {/*<CssBaseline />
       <AppBar position="fixed" className={classes.appBar} color="secondary">
         <Toolbar>
           <IconButton
@@ -124,7 +124,7 @@ function HistoriaClinica(props) {
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="mailbox folders">
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        {/* The implementation can be swapped with js to avoid SEO duplication of links. 
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
@@ -154,8 +154,8 @@ function HistoriaClinica(props) {
           </Drawer>
         </Hidden>
       </nav>
-    <main className={classes.content}>
-        <div className={classes.toolbar} />
+    <main className={classes.content}
+        <div className={classes.toolbar} />*/}
         <div className="container-fluid">
     <div className={classes.root}>
       <Grid container spacing={3}>
@@ -188,18 +188,8 @@ function HistoriaClinica(props) {
         </Grid>*/}
       </Grid>
     </div>
-    </div>
-      </main>
-    </div>
+    </div></div>
   );
 }
-
-HistoriaClinica.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
 
 export default HistoriaClinica;
