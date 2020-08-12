@@ -10,21 +10,24 @@ import Turnos from './components/Turnos';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Registrar from './components/Registrar';
+import CenteredGrid from './components/CenteredGrid';
+import MenuAppBar from './components/MenuAppBar';
 
 class Router extends Component {
     render() {
         return (
             <BrowserRouter>
-                {/*<header className="App-header">
+                <header className="App-header">
                     <div>
                         <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png" />
                     </div>
-                </header>*/}
+                    <MenuAppBar/>
+                </header>
                 <body className="App-body">
                 <Switch>
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
-                    <Route exact path="/" component={ResponsiveDrawer} />
-                    <Route exact path="/home" component={ResponsiveDrawer} />
+                    <Route exact path="/" component={CenteredGrid} />
+                    <Route exact path="/home" component={CenteredGrid} />
                     <Route exact path="/GestionDeUsuarios" component={MiComponente} />
                     <Route exact path="/Turnos" component={Turnos} />
                     <Route exact path="/HistoriaClinica" component={HistoriaClinica} />
@@ -36,9 +39,9 @@ class Router extends Component {
 
                 </Switch>
                 </body>
-                {/*<footer className='App-footer'>
+                <footer className='App-footer'>
                     <Footer/>
-                </footer>*/}
+                </footer>
             </BrowserRouter>
         
         );
