@@ -4,16 +4,14 @@ import CheckboxList from './CheckboxList';
 import ComboBox from './ComboBox';
 
 export default function Recetas() {
-    
-  
+
+   
     return (
   
 
     <div>
         <ComboBox/>
-
-        <CheckboxList/>
-       
+        <CheckboxList/> 
         <IconLabelButtons/>
     </div>
     );

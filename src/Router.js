@@ -9,6 +9,8 @@ import Error from './components/Error';
 import Turnos from './components/Turnos';
 import MenuAppBar from './components/MenuAppBar';
 import Footer from './components/Footer';
+import Login from './components/Login';
+import Registrar from './components/Registrar';
 
 class Router extends Component {
     render() {
@@ -24,10 +26,14 @@ class Router extends Component {
                 <Switch>
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={CenteredGrid} />
+                    <Route exact path="/home" component={CenteredGrid} />
                     <Route exact path="/GestionDeUsuarios" component={MiComponente} />
                     <Route exact path="/Turnos" component={Turnos} />
                     <Route exact path="/HistoriaClinica" component={HistoriaClinica} />
                     <Route exact path="/Recetas" component={Recetas} />
+                    <Route exact path="/Login" component={Login} />
+                    <Route exact path="/Registrar" component={Registrar} />
+                    
                     <Route component={Error} />
 
                 </Switch>
