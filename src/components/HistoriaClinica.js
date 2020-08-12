@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
 import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
+import FormHC from './FormHC';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,7 +40,7 @@ export default function HistoriaClinica() {
         </Grid>
         <Grid item xs={9}>
           <Paper className={classes.paper}>
-            <h1>Aquí va la HistoriaClinica</h1>
+            <FormHC/>
             <IconLabelButtons/>
             </Paper>
         </Grid>
