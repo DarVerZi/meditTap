@@ -10,6 +10,8 @@ import ComboBox from './ComboBox';
 import FormHC from './FormHC';
 import HCCheckBoxes from './CheckBoxes-HC';
 import HCDescriptions from './Descriptions-HC';
+import MenuAppBar from './MenuAppBar2';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -30,12 +32,71 @@ return (
         <div className="container-fluid">
             <div className="row">
                 <div className="col-12">
-                    <div className="col-sm-6 col-xs-12">
-                    bloque
-                    </div>
+                    <MenuAppBar/>
+                    <br></br>
                 </div>
                 <div className="col-12">
-                    bloque
+                <div>
+                    <ComboBox/>
+                    <br></br>
+                </div>
+                </div>
+                <div className="col-12">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputNombre">Nombres</label>
+                            <input type="text" class="form-control" id="inputNombre"/>
+                        </div>
+    <div class="form-group col-md-6">
+      <label for="inputApellido">Apellidos</label>
+      <input type="text" class="form-control" id="inputApellido"/>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputDNI">Nro Documento</label>
+      <input type="text" class="form-control" id="inputDNI"/>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputFNac">Fecha de Nacimiento</label>
+      <input type="text" class="form-control" id="inputFNac"/>
+    </div>
+  <div class="form-group col-md-4">
+      <label for="inputGenero">Genero</label>
+      <select id="inputGenero" class="form-control">
+        <option selected>Seleccione...</option>
+        <option>Hombre</option>
+        <option>Mujer</option>
+      </select>
+    </div>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="inputDomicilio">Domicilio</label>
+    <input type="text" class="form-control" id="inputDomicilio" placeholder="Calle, número, depto, etc."/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputEmail">Email</label>
+    <input type="email" class="form-control" id="inputEmail"/>
+  </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+    <label for="inputTelPrin">Telefono Principal</label>
+    <input type="text" class="form-control" id="inputTelPrin"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="inputCel">Telefono Celular</label>
+    <input type="text" class="form-control" id="inputCel"/>
+  </div>
+  </div>
+  <div class="form-group">
+    <label for="inputObser">Observaciones</label>
+    <textarea type="text" class="form-control" id="inputObser" placeholder="Aclaraciones sobre los campos anteriores"/>
+  </div>
+  {/*<button type="submit" class="btn btn-primary">Sign in</button>*/}
+</form>
                 </div>
                 <div className="col-12">
                     bloque
@@ -45,6 +106,6 @@ return (
                 </div>
             </div>
         </div>
-    </div>
+        </div>
   );
 }

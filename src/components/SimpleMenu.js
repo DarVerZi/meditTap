@@ -49,7 +49,7 @@ export default function SimpleMenu() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}><NavLink to="/">Home</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink to="/Home">Home</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink to="/GestionDeUsuarios">Gestion De Usuarios</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink to="/Turnos">Turnos</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink to="/HistoriaClinica">Historia Clinica</NavLink></MenuItem>
