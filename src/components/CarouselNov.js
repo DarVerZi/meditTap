@@ -29,7 +29,7 @@ export default function CarouselNov(props) {
     <Grid item xs={6}>
     <img src={imagen1} alt="Nuestros servicios" height="100%" width="100%"/>
     </Grid>
-    <Grid item xs={6}><h5 class="d-block w-150"> prueba de grillas en carousel
+    <Grid item xs={6}><h5 class="d-block w-150"> Conocé todos los servicios que brindamos en MedicTap
           </h5>
     </Grid>
     </Grid>
@@ -37,8 +37,11 @@ export default function CarouselNov(props) {
     <div class="carousel-item">
     <Grid container spacing={3}>
     <Grid item xs={6}>
-    <h5 class="d-block w-150"> prueba de grillas en carousel
-          </h5>
+    <p>
+    Descargá tus recetas
+    </p>
+    <p> A partir de la nueva realidad planteada por el Covid-19, podrás encontrar tus recetas listas para descargar en la sección de recetas.
+          </p>
     </Grid>
     <Grid item xs={6}>
     <img src={imagen2} alt="Recetas digitalizadas" height="100%" width="100%"/>

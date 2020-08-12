@@ -17,6 +17,8 @@ import Grid from '@material-ui/core/Grid';
 import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
 import FormHC from './FormHC';
+import HCCheckBoxes from './CheckBoxes-HC';
+import HCDescriptions from './Descriptions-HC';
 
 const drawerWidth = 240;
 
@@ -164,6 +166,12 @@ function HistoriaClinica(props) {
           </Grid>
           <Grid item xs={12}>
             <FormHC/>
+            </Grid>
+            <Grid item xs={6}>
+            <HCDescriptions/>
+            </Grid>
+            <Grid item xs={6}>
+            <HCCheckBoxes/>
             </Grid>
             <Grid item xs={12}>
             <IconLabelButtons/>
