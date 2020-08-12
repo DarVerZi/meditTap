@@ -13,7 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
 import SimpleMenu from './SimpleMenu';
-import { Container } from '@material-ui/core';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -121,12 +121,8 @@ export default function MenuAppBar() {
                   open={open}
                   onClose={handleClose}
                 > 
-                  <MenuItem
-                  primaryText="Login"
-                  onClick={handleClose}
-                  path="/"
-                  ><Container>Logout</Container>  
-                  </MenuItem>
+                  <MenuItem onClick={handleClose}><NavLink to="/">Logout</NavLink></MenuItem>
+
                 </Menu>
               </div>
             )}
