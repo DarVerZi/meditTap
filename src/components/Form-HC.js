@@ -1,21 +1,52 @@
 import React from 'react';
-export default function HistoriaClinica() {
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import HCCheckBoxes from './CheckBoxes-HC';
+import HCDescriptions from './Descriptions-HC'
 
-
-    return (
-        <div>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
-            </div>
-
-                <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
-                 </div>
-
-        </div>
-
-    
-    );
-}
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          flexGrow: 1,
+        },
+        paper: {
+          padding: theme.spacing(2),
+          textAlign: 'center',
+          color: theme.palette.text.secondary,
+        },
+      }));
+      
+      export default function HistoriaClinica() {
+        const classes = useStyles();
+      
+        return (
+          <div className={classes.root}>
+            <Grid container spacing={3}>
+              {/*<Grid item xs={12}>
+                <Paper className={classes.paper}>
+                </Paper>
+              </Grid>*/}
+              <Grid item xs={6}>
+                <Paper className={classes.paper}>xs=6</Paper>
+                <HCDescriptions/>
+              </Grid>
+              <Grid item xs={6}>
+                <Paper className={classes.paper}>xs=6</Paper>
+                <HCCheckBoxes/>
+              </Grid>
+              {/*<Grid item xs={3}>
+                <Paper className={classes.paper}>xs=3</Paper>
+              </Grid>
+              <Grid item xs={3}>
+                <Paper className={classes.paper}>xs=3</Paper>
+              </Grid>
+              <Grid item xs={3}>
+                <Paper className={classes.paper}>xs=3</Paper>
+              </Grid>
+              <Grid item xs={3}>
+                <Paper className={classes.paper}>xs=3</Paper>
+              </Grid>*/}
+            </Grid>
+          </div>
+        );
+      }

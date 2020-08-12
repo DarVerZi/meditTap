@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MiComponente from './components/MiComponente';
 import CenteredGrid from './components/CenteredGrid';
 import Recetas from './components/Recetas';
-import HistoriaClinica from './components/HistoriaClinica';
+import HistoriaClinica from './components/Form-HC';
 import Error from './components/Error';
 import Turnos from './components/Turnos';
 import MenuAppBar from './components/MenuAppBar';
