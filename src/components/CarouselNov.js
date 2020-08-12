@@ -13,30 +13,33 @@ import imagen2 from './carousel2.png';
 import imagen3 from './carousel3.png';
 
 export default function CarouselNov(props) {
-    const { children, value, index, ...other } = props;
+    const { children, value, index,  ...other } = props;
   
     return (
-        <div className="container-fluid">
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleControls" data-slide-to="1"></li>
-    <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <Grid container spacing={3}>
-    <Grid item xs={6}>
+        <div className="container-fluid" >
+        <div className="container" justify = "center" alignItems = "center">
+
+          {/*<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+              <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+            </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+            <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
     <img src={imagen1} alt="Nuestros servicios" height="100%" width="100%"/>
     </Grid>
-    <Grid item xs={6}><h5 class="d-block w-150"> Conocé todos los servicios que brindamos en MedicTap
-          </h5>
+    <Grid item xs={12} sm={6}>
+    <h5 class="d-block w-150"> Conocé todos los servicios que brindamos en MedicTap</h5>
     </Grid>
     </Grid>
     </div>
+    </div>
     <div class="carousel-item">
     <Grid container spacing={3}>
-    <Grid item xs={6}>
+    <Grid item xs={12} sm={6}>
     <p>
     Descargá tus recetas
     </p>
@@ -50,7 +53,7 @@ export default function CarouselNov(props) {
     </div>
     <div class="carousel-item">
     <Grid container spacing={3}>
-    <Grid item xs={6}>
+    <Grid item xs={12} sm={6}>
       <img src={imagen3} alt="Protocolo Covid-19" height="100%" width="100%"/>
     </Grid>
     <Grid item xs={6}><h5 class="d-block w-150"> prueba de grillas en carousel
@@ -67,6 +70,46 @@ export default function CarouselNov(props) {
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>*/}
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src={imagen3} alt="Protocolo Covid-19" height="80%" width="100%"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src={imagen2} alt="Recetas digitalizadas" height="80%" width="100%"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img src={imagen1} alt="Nuestros servicios" height="80%" width="100%"/>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-</div>);
+</div>
+</div>
+);
 }
