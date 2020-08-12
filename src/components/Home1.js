@@ -1,9 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
 import CarouselNov from './CarouselNov';
+import MenuAppBar from './MenuAppBar';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CenteredGrid() {
+export default function Home1() {
   const classes = useStyles();
 
   return (
@@ -24,6 +24,7 @@ export default function CenteredGrid() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
+            <MenuAppBar/>
             <CarouselNov/>
             <FullWidthTabs/>
         </Grid>
