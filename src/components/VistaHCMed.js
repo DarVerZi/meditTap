@@ -9,7 +9,6 @@ import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
 import FormHC from './FormHC';
 import HCCheckBoxes from './CheckBoxes-HC';
-import HCDescriptions from './Descriptions-HC';
 import MenuAppBar from './MenuAppBar2';
 import TextField from '@material-ui/core/TextField';
 
@@ -94,14 +93,9 @@ return (
     <input type="text" class="form-control" id="inputCel"/>
   </div>
   </div>
-  <div class="form-group">
-    <label for="inputObser">Observaciones</label>
-    <textarea type="text" class="form-control" id="inputObser" placeholder="Aclaraciones sobre los campos anteriores"/>
-  </div>
   {/*<button type="submit" class="btn btn-primary">Sign in</button>*/}
 </form>
                 </div>
-                <div className="col-12">
                 {/* Formulario de datos médicos */}
                 <div className="col-12">
                 <div class="form-group row">
@@ -123,9 +117,256 @@ return (
       </div>
     </div>
   </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Esta Ud. recibiendo tratamiento medico actualmente?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Ha notado Ud. algun cambio en su salud general durante el ultimo año?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Ha estado Ud. seriamente enfermo alguna vez?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Ha estado Ud. hospitalizado?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Conoce Ud. algun problema relacionado con su presion arterial?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Padece Ud. problemas del corazon?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Padece Ud. problemas respiratorios?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-6">Padece Ud. ataques, desmayos o convulsiones recurrentes?</div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Sí
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+  {/*Solo checkBoxes a partir de aquí*/}
+  <div class="form-group row">
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Alergias
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Infartos
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Soplo cardíaco
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Diabetes
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Fiebre reumática
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Anemia
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Tuberculosis
+        </label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
+        <label class="form-check-label" for="gridCheck1">
+          Artrosis
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputObser">Observaciones</label>
+    <textarea type="text" class="form-control" id="inputObser" placeholder="Aclaraciones sobre los campos anteriores"/>
+  </div>
                 </div>
+                {/*Tabla con novedades*/}
+                <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col-sm-3">Asunto</th>
+      <th scope="col-sm-3">Fecha</th>
+      <th scope="col-sm-6">Novedad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Gastritis</th>
+      <td>13/08/2020</td>
+      <td>El paciente presentó un cuadro de gastritis aguda y se le recetaron los medicamentos correspondientes</td>
+    </tr>
+    <tr>
+      <th scope="row">Colesterol</th>
+      <td>15/07/2020</td>
+      <td>Valores de colesterol elevado en los últimos estudios realizados (13/07/2020)</td>
+    </tr>
+  </tbody>
+</table>
             </div>
         </div>
-        </div></div>
+        </div>
   );
 }

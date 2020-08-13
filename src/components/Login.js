@@ -16,6 +16,7 @@ import { withStyles } from "@material-ui/core/styles";
 //import AlertDialog from './AlertDialog';
 import {withRouter} from 'react-router-dom';
 import MiComponente from './MiComponente';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
  
 
@@ -80,7 +81,9 @@ class Ingreso extends React.Component{
           state: {
             rol: this.state.rol
           }
+               
       });
+
     } else if (this.state.email==="admin@gmail.com" && this.state.password==="123456") {
           console.log(this.state.rol1)
             this.props.history.push({

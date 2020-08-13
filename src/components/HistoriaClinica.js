@@ -9,7 +9,6 @@ import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
 import FormHC from './FormHC';
 import HCCheckBoxes from './CheckBoxes-HC';
-import HCDescriptions from './Descriptions-HC';
 
 const drawerWidth = 240;
 
@@ -159,7 +158,6 @@ function HistoriaClinica(props) {
             <FormHC/>
             </Grid>
             <Grid item xs={6}>
-            <HCDescriptions/>
             </Grid>
             <Grid item xs={6}>
             <HCCheckBoxes/>
