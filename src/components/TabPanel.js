@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Contacto from './Contacto';
+import NuestrasEspecialidades from './NuestrasEspecialidades';
+import DondeEstamos from './DondeEstamos';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
