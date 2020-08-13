@@ -70,8 +70,6 @@ class Ingreso extends React.Component{
     }
   }
 
- 
-
   //Capturar el mail y pwd cuando la ingresas en el estao
   presionarBotonLogin = () => {
       if (this.state.email==="medico@gmail.com" && this.state.password==="123456") {

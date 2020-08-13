@@ -5,6 +5,7 @@ import MiComponente from './components/MiComponente';
 import ResponsiveDrawer from './components/ResponsiveDrawer';
 import Recetas from './components/Recetas';
 import VistaHCPac from './components/VistaHCPac';
+import HistoriaClinica from './components/HistoriaClinica';
 import Error from './components/Error';
 import Turnos from './components/Turnos';
 import Login from './components/Login';
@@ -27,16 +28,37 @@ class Router extends Component {
                 <Switch>
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={Home1} />
-                    <Route exact path="/home" component={Home2} />
-                    <Route exact path="/GestionDeUsuarios" component={MiComponente} />
+                    <Route exact path="/home" component={Home2}/>
+                    <Route exact path="/GestionDeUsuarios/" component={MiComponente} />
                     <Route exact path="/Turnos" component={Turnos} />
-                    <Route exact path="/HistoriaClinica" component={VistaHCMed} />
-                    <Route exact path="/Recetas" component={Recetas} />
+                    <Route exact path="/HistoriaClinica" component={HistoriaClinica} />
+                    <Route exact path="/HistoriaClinica/:rol" render={(props) => {
+                        var rol = props.match.params.rol;
+                        return (
+                            <div rol="content">
+                            <h1>Pagina 1</h1>
+                            <HistoriaClinica pru={rol}/>
+                            <h2>{rol}</h2>
+                            </div>
+                        );
+                    }} />
+
+                    
                     <Route exact path="/Login" component={Login} />
                     <Route exact path="/Registrar" component={Registrar} />
+                    {/*<Route exact path="/Recetas" component={Recetas} />*/}
+                    <Route exact path="/Recetas/:rol" render={(props) => {
+                        var rol = props.match.params.rol;
+                        return (
+                            <div rol="content">
+                            <h1>Pagina 1</h1>
+                            <Recetas pru={rol}/>
+                            <h2>{rol}</h2>
+                            </div>
+                        );
+                    }} />
                     
                     <Route component={Error} />
-
                 </Switch>
                 </body>
                 <footer className='App-footer'>
