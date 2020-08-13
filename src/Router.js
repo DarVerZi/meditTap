@@ -27,9 +27,28 @@ class Router extends Component {
                 <Switch>
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={Home1} />
-                    <Route exact path="/home" component={Home2}/>
+                    
+                    <Route exact path="/home/:rol" render={(props) => {
+                        var rol = props.match.params.rol;
+                        return (
+                            <div rol="content">
+                            <Home2 pru={rol}/>
+                            </div>
+                        );
+                    }} />
                     <Route exact path="/GestionDeUsuarios/" component={MiComponente} />
-                    <Route exact path="/Turnos" component={Turnos} />
+                    <Route exact path="/" component={Home1} />
+                    
+                    <Route exact path="/Turnos/:rol" render={(props) => {
+                        var rol = props.match.params.rol;
+                        return (
+                            <div rol="content">
+                            <Turnos pru={rol}/>
+                            </div>
+                        );
+                    }} />
+
+
                     {/*<Route exact path="/HistoriaClinica" component={HistoriaClinica} />*/}
                     <Route exact path="/HistoriaClinica/:rol" render={(props) => {
                         var rol = props.match.params.rol;
@@ -40,12 +59,7 @@ class Router extends Component {
                             <h2>{rol}</h2>
                             </div>
                         );
-                    }} />
-
-                    
-                    <Route exact path="/Login" component={Login} />
-                    <Route exact path="/Registrar" component={Registrar} />
-                    {/*<Route exact path="/Recetas" component={Recetas} />*/}
+                    }} />                    
                     <Route exact path="/Recetas/:rol" render={(props) => {
                         var rol = props.match.params.rol;
                         return (
@@ -56,6 +70,9 @@ class Router extends Component {
                             </div>
                         );
                     }} />
+                    <Route exact path="/Login" component={Login} />
+                    <Route exact path="/Registrar" component={Registrar} />
+                    
                     
                     <Route component={Error} />
                 </Switch>

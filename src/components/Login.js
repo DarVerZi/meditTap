@@ -75,7 +75,7 @@ class Ingreso extends React.Component{
       if (this.state.email==="medico@gmail.com" && this.state.password==="123456") {
         console.log(this.state.rol)
         this.props.history.push({
-          pathname: '/home',
+          pathname: '/home/medico',
           state: {
             rol: this.state.rol
           }
@@ -85,7 +85,7 @@ class Ingreso extends React.Component{
     } else if (this.state.email==="admin@gmail.com" && this.state.password==="123456") {
           console.log(this.state.rol1)
             this.props.history.push({
-              pathname: '/home',
+              pathname: '/home/admin',
               state: {
                 rol1: this.state.rol1
               }
@@ -93,7 +93,7 @@ class Ingreso extends React.Component{
     }else if (this.state.email==="secretaria@gmail.com" && this.state.password==="123456"){
           console.log(this.state.rol2)
             this.props.history.push({
-              pathname: '/home',
+              pathname: '/home/secretaria',
               state: {
                 rol: this.state.rol2
               }
@@ -101,7 +101,7 @@ class Ingreso extends React.Component{
     }else if (this.state.email==="paciente@gmail.com" && this.state.password==="123456"){
             console.log(this.state.rol3)
             this.props.history.push({
-              pathname: '/home',
+              pathname: '/home/paciente',
               state: {
                 rol: this.state.rol3
               }

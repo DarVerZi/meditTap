@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
 import CarouselNov from './CarouselNov';
 import MenuAppBar from './MenuAppBar2';
+import jsxToString from 'jsx-to-string';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,15 +19,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CenteredGrid() {
+export default function CenteredGrid(props) {
+  var rol = props.pru;
   const classes = useStyles();
-
+  
+ 
   return (
     <div className="container-fluid">
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-            <MenuAppBar/>
+           <MenuAppBar rol={rol}/>
             <CarouselNov/>
             <FullWidthTabs/>
         </Grid>

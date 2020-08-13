@@ -31,7 +31,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function MenuAppBar() {
+export default function MenuAppBar(props) {
+  const rol = props.rol;
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -53,11 +54,10 @@ export default function MenuAppBar() {
     <div className="container-fluid">
     
       <div className={classes.root}>
-
         <AppBar position="static" className={classes.root}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <SimpleMenu />
+            <SimpleMenu rol={rol}/>
               {/*<MenuIcon />
               <div class="d-flex flex-row bd-highlight mb-3">
               <ul class="nav">

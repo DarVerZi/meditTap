@@ -90,13 +90,16 @@ export default function FullWidthTabs() {
           </p7>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        Hola!!!!
+          nuestras especialidades
+          {/*Aca va el complemento de GIAN - Especialidades*/}
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Contacto/>
+          donde estamos
+          {/*Aca va el complemento de GIAN - dondeEstamos*/}
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel value={value} index={3} dir={theme.direction}>
           <Contacto/>
+          {/*Aca va el complemento de GIAN - contacto*/}
         </TabPanel>
       </SwipeableViews>
     </div>

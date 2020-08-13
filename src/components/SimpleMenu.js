@@ -23,8 +23,8 @@ const myTheme = createMuiTheme({
     },
 });*/
 
-export default function SimpleMenu() {
-
+export default function SimpleMenu(props) {
+    const rol = props.rol;
     /*const classes = createStyles();*/
     
     const [anchorEl, setAnchorEl] = React.useState(0);
@@ -37,26 +37,51 @@ export default function SimpleMenu() {
         setAnchorEl(null);
     };    
 
-    return (
-        <div>
-            <Button aria-controls="simple-menu" aria-haspopup="true" variant="contained" color="secondary" onClick={handleClick}>
-                Menu
-      </Button>
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-            >
-                <MenuItem onClick={handleClose}><NavLink to="/Home">Home</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/GestionDeUsuarios">Gestion De Usuarios</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/Turnos">Turnos</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/HistoriaClinica">Historia Clinica</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink to="/Recetas">Recetas</NavLink></MenuItem>
-                
-            </Menu>
-        </div>
-    );
+    if(rol==="admin") {
+        return (
+            <div>
+                <Button aria-controls="simple-menu" aria-haspopup="true" variant="contained" color="secondary" onClick={handleClick}>
+                    Menu
+          </Button>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={handleClose}><NavLink to={"/Home/"+rol}>Home</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/GestionDeUsuarios/"+rol}>Gestion De Usuarios</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos/"+rol}>Turnos</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica/"+rol}>Historia Clinica</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas/"+rol}>Recetas</NavLink></MenuItem>
+                    
+                </Menu>
+            </div>
+        );
+    }
+    else {
+        return (
+            <div>
+                <Button aria-controls="simple-menu" aria-haspopup="true" variant="contained" color="secondary" onClick={handleClick}>
+                    Menu
+          </Button>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={handleClose}><NavLink to={"/Home/"+rol}>Home</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos/"+rol}>Turnos</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica/"+rol}>Historia Clinica</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas/"+rol}>Recetas</NavLink></MenuItem>
+                    
+                </Menu>
+            </div>
+        );
+
+    }
 }
 //export default SimpleMenu(); 
