@@ -38,9 +38,17 @@ class Router extends Component {
                             </div>
                         );
                     }} />
-                    <Route exact path="/GestionDeUsuarios/" component={VistaGestionUsuarios} />
                     <Route exact path="/" component={Home1} />
                     
+                    <Route exact path="/GestionDeUsuarios/:rol" render={(props) => {
+                        var rol = props.match.params.rol;
+                        return (
+                            <div rol="content">
+                            <VistaGestionUsuarios pru={rol}/>
+                            </div>
+                        );
+                    }} />
+
                     <Route exact path="/Turnos/:rol" render={(props) => {
                         var rol = props.match.params.rol;
                         return (
@@ -64,9 +72,7 @@ class Router extends Component {
                         var rol = props.match.params.rol;
                         return (
                             <div rol="content">
-                            <h1>Pagina 1</h1>
                             <Recetas pru={rol}/>
-                            <h2>{rol}</h2>
                             </div>
                         );
                     }} />

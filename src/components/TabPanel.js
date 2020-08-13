@@ -93,10 +93,12 @@ export default function FullWidthTabs() {
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           nuestras especialidades
+          <NuestrasEspecialidades/>
           {/*Aca va el complemento de GIAN - Especialidades*/}
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           donde estamos
+          <DondeEstamos/>
           {/*Aca va el complemento de GIAN - dondeEstamos*/}
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>

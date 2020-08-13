@@ -1,16 +1,17 @@
 import React from 'react';
-import IconLabelButtons from './IconLabelButtons';
-import CheckboxList from './CheckboxList';
-import ComboBox from './ComboBox';
+import VistaRecetasPac from './VistaRecetasPac';
+import VistaRecetasMed from './VistaRecetasMed';
 
 export default function Recetas(props) {
     const valor = props.pru;
-    return (
-    <div>
-        {valor}
-        <ComboBox/>
-        <CheckboxList/> 
-        <IconLabelButtons/>
-    </div>
-    );
+    
+    if (valor==="paciente") {
+        return <VistaRecetasPac/>;
+        }
+    else{
+        return <VistaRecetasMed/> ;
+      };
+    
+        
+
 }
