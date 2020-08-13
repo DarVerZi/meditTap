@@ -5,7 +5,6 @@ import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
 import CarouselNov from './CarouselNov';
 import MenuAppBar from './MenuAppBar2';
-import jsxToString from 'jsx-to-string';
 
 
 const useStyles = makeStyles((theme) => ({

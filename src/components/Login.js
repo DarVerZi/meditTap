@@ -148,6 +148,7 @@ class Ingreso extends React.Component{
             autoComplete="email"
             onChange={this.cambiarTextoEmail}
             autoFocus
+            color="secondary"
             style={{
               backgroundColor: "white"
             }}
@@ -161,6 +162,7 @@ class Ingreso extends React.Component{
             label="Contraseña"
             type="contraseña"
             id="contraseña"
+            color="secondary"
             autoComplete="current-password"
             onChange={this.cambiarTextoPassword}
             style={{
@@ -171,18 +173,15 @@ class Ingreso extends React.Component{
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             className={classes.submit}
             onClick={this.presionarBotonLogin}
           >
             Ingresar
           </Button>
           <Grid container>
-            <Grid item xs>
-              <MiComponente/>
-            </Grid>
             <Grid item>
-              <Link href="Registro" variant="body2">
+              <Link href="Registrar" variant="body2" color="secondary">
                 {"No tiene una cuenta? Registrese"}
               </Link>
             </Grid>

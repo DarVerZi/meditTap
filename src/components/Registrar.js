@@ -69,6 +69,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="firstName"
+                color="secondary"
                 label="First Name"
                 autoFocus
               />
@@ -80,6 +81,7 @@ export default function SignUp() {
                 fullWidth
                 id="lastName"
                 label="Last Name"
+                color="secondary"
                 name="lastName"
                 autoComplete="lname"
               />
@@ -90,6 +92,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 id="email"
+                color="secondary"
                 label="Email Address"
                 name="email"
                 autoComplete="email"
@@ -104,6 +107,7 @@ export default function SignUp() {
                 label="Password"
                 type="password"
                 id="password"
+                color="secondary"
                 autoComplete="current-password"
               />
             </Grid>
@@ -118,14 +122,14 @@ export default function SignUp() {
             type="submit"
             fullWidth
             variant="contained"
-            color="primary"
+            color="secondary"
             className={classes.submit}
           >
             Sign Up
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="Login" variant="body2" color="secondary">
                 Already have an account? Sign in
               </Link>
             </Grid>

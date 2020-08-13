@@ -65,14 +65,14 @@ return (
 </form>
   </div>
   <div class="form-group col-md-2">
-  <button type="submit" class="btn btn-danger btn-lg" width="60px">Subir</button>
+  <button type="submit" class="btn btn-danger btn-lg">Subir</button>
   </div>
   <div class="form-group col-md-2">
-  <button type="submit" class="btn btn-secondary btn-lg" width="60px">Cancelar</button>
+  <button type="submit" class="btn btn-secondary btn-lg">Cancelar</button>
   </div>
   </div></div></div>
                 </div>
-                {/*Tabla con novedades*/}
+                {/*Tabla de recetas*/}
                 <h1>Historial de Recetas</h1>
                 <table class="table table-striped">
   <thead>
