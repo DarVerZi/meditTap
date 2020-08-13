@@ -1,7 +1,7 @@
 import React, { component, Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //import Intra from './components/Intra';
-import MiComponente from './components/MiComponente';
+import VistaGestionUsuarios from './components/VistaGestionUsuarios';
 import ResponsiveDrawer from './components/ResponsiveDrawer';
 import Recetas from './components/Recetas';
 import VistaHCPac from './components/VistaHCPac';
@@ -14,6 +14,7 @@ import Home1 from './components/Home1';
 import Home2 from './components/Home2';
 import CenteredGrid from './components/Home2';
 import VistaHCMed from './components/VistaHCMed';
+import VistaRecetasPac from './components/VistaRecetasPac';
 
 class Router extends Component {
     render() {
@@ -29,16 +30,14 @@ class Router extends Component {
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={Home1} />
                     <Route exact path="/home" component={Home2}/>
-                    <Route exact path="/GestionDeUsuarios/" component={MiComponente} />
+                    <Route exact path="/GestionDeUsuarios/" component={VistaGestionUsuarios} />
                     <Route exact path="/Turnos" component={Turnos} />
                     <Route exact path="/HistoriaClinica" component={HistoriaClinica} />
                     <Route exact path="/HistoriaClinica/:rol" render={(props) => {
                         var rol = props.match.params.rol;
                         return (
                             <div rol="content">
-                            <h1>Pagina 1</h1>
                             <HistoriaClinica pru={rol}/>
-                            <h2>{rol}</h2>
                             </div>
                         );
                     }} />
@@ -57,7 +56,6 @@ class Router extends Component {
                             </div>
                         );
                     }} />
-                    
                     <Route component={Error} />
                 </Switch>
                 </body>

@@ -1,16 +1,7 @@
 import React from 'react';
-import Divider from '@material-ui/core/Divider';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
-import FormHC from './FormHC';
-import HCCheckBoxes from './CheckBoxes-HC';
 import MenuAppBar from './MenuAppBar2';
-import TextField from '@material-ui/core/TextField';
 import DeleteIcon from '@material-ui/icons/Delete';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import Button from '@material-ui/core/Button';
@@ -43,6 +34,7 @@ return (
                 </div>
                 {/* Buscador de pacientes */}
                 <div className="col-12">
+                <h1>Historia Clínica</h1>
                 <div>
                     <ComboBox/>
                     <br></br>
@@ -222,7 +214,7 @@ return (
     <div class="col-sm-6">Padece Ud. problemas del corazon?</div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" disabled="true" id="gridCheck1"/>
+        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
         <label class="form-check-label" for="gridCheck1">
           Sí
         </label>
@@ -346,10 +338,11 @@ return (
   </div>
   <div class="form-group">
     <label for="inputObser">Observaciones</label>
-    <textarea type="text" class="form-control" id="inputObser" placeholder="Aclaraciones sobre los campos anteriores"/>
+    <textarea type="text" disabled="true" class="form-control" id="inputObser" placeholder="Aclaraciones sobre los campos anteriores"/>
   </div>
                 </div>
                 {/*Tabla con novedades*/}
+                <h1>Historial de Novedades</h1>
                 <table class="table table-striped">
   <thead>
     <tr>
@@ -373,6 +366,7 @@ return (
 </table>
 {/*Carga de novedades*/}
 <div className="col-12">
+<h1>Cargar Novedades</h1>
 <form>
     <div class="form-row">
     <div class="form-group col-md-6">

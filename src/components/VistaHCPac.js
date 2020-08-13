@@ -50,6 +50,7 @@ return (
                 </div>
                 {/* Formulario de datos personales */}
                 <div className="col-12">
+                <h1>Historia Clínica</h1>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -350,6 +351,7 @@ return (
   </div>
                 </div>
                 {/*Tabla con novedades*/}
+                <h1>Historial de Novedades</h1>
                 <table class="table table-striped">
   <thead>
     <tr>
