@@ -72,7 +72,7 @@ class Ingreso extends React.Component{
 
   //Capturar el mail y pwd cuando la ingresas en el estao
   presionarBotonLogin = () => {
-      if (this.state.email==="medico@gmail.com" && this.state.password==="123456") {
+      if (this.state.email==="medico@medictap.com" && this.state.password==="123") {
         console.log(this.state.rol)
         this.props.history.push({
           pathname: '/home/medico',
@@ -82,7 +82,7 @@ class Ingreso extends React.Component{
                
       });
 
-    } else if (this.state.email==="admin@gmail.com" && this.state.password==="123456") {
+    } else if (this.state.email==="admin@medictap.com" && this.state.password==="123") {
           console.log(this.state.rol1)
             this.props.history.push({
               pathname: '/home/admin',
@@ -90,7 +90,7 @@ class Ingreso extends React.Component{
                 rol1: this.state.rol1
               }
           });
-    }else if (this.state.email==="secretaria@gmail.com" && this.state.password==="123456"){
+    }else if (this.state.email==="secretaria@medictap.com" && this.state.password==="123"){
           console.log(this.state.rol2)
             this.props.history.push({
               pathname: '/home/secretaria',
@@ -98,7 +98,7 @@ class Ingreso extends React.Component{
                 rol: this.state.rol2
               }
             });
-    }else if (this.state.email==="paciente@gmail.com" && this.state.password==="123456"){
+    }else if (this.state.email==="paciente@medictap.com" && this.state.password==="123"){
             console.log(this.state.rol3)
             this.props.history.push({
               pathname: '/home/paciente',
