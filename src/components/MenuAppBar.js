@@ -13,8 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
 import SimpleMenu from './SimpleMenu';
-import { Container } from '@material-ui/core';
-
+import { NavLink } from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
@@ -120,15 +119,8 @@ export default function MenuAppBar() {
                   open={open}
                   onClose={handleClose}
                 > 
-                  <MenuItem
-                  //containerElement={<Link to="/Login"/>}
-                  primaryText="Login"
-                  onClick={handleClose}
-                  >Login
-                  </MenuItem>
-                  <MenuItem onClick={handleClose} containerElement={<Link to="/Registrar"/>}>
-                    Registrar
-                  </MenuItem>
+                  <MenuItem onClick={handleClose}><NavLink to="/Login">Login</NavLink></MenuItem>
+                  <MenuItem onClick={handleClose}><NavLink to="/Registrar">Registrarse</NavLink></MenuItem>
                 </Menu>
               </div>
             )}
