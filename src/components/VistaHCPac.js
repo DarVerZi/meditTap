@@ -9,7 +9,6 @@ import IconLabelButtons from './IconLabelButtons';
 import ComboBox from './ComboBox';
 import FormHC from './FormHC';
 import HCCheckBoxes from './CheckBoxes-HC';
-import HCDescriptions from './Descriptions-HC';
 import MenuAppBar from './MenuAppBar2';
 
 const useStyles = makeStyles((theme) => ({
