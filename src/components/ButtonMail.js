@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+import MailIcon from '@material-ui/icons/Mail';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function ButtonReservar() {
+export default function ButtonMail() {
     const classes = useStyles();
 
     return (
@@ -24,10 +24,11 @@ export default function ButtonReservar() {
                 variant="contained"
                 color="default"
                 className={classes.button}
-                startIcon={<EventAvailableIcon />}
+                startIcon={<MailIcon />}
             >
-                Reservar
+                
       </Button>
         </form>
     );
 }
+
