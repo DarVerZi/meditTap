@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
 import Contacto from './Contacto';
+import NuestrasEspecialidades from './NuestrasEspecialidades';
+import DondeEstamos from './DondeEstamos';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -90,12 +92,12 @@ export default function FullWidthTabs() {
           </p7>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        Hola!!!!
+        <NuestrasEspecialidades/>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Contacto/>
+          <DondeEstamos/>
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel value={value} index={3} dir={theme.direction}>
           <Contacto/>
         </TabPanel>
       </SwipeableViews>
