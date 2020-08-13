@@ -28,7 +28,5 @@ export default function ComboBox() {
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
-  { name: 'Gian Camin'},
-  { name: 'Maria Estrano'},
   { name: 'Dario Vergara'},
 ];

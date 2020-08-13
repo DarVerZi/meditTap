@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MiComponente from './components/MiComponente';
 import ResponsiveDrawer from './components/ResponsiveDrawer';
 import Recetas from './components/Recetas';
-import VistaHCMed from './components/VistaHCMed';
+import VistaHCPac from './components/VistaHCPac';
 import Error from './components/Error';
 import Turnos from './components/Turnos';
 import Login from './components/Login';
@@ -12,7 +12,7 @@ import Registrar from './components/Registrar';
 import Home1 from './components/Home1';
 import Home2 from './components/Home2';
 import CenteredGrid from './components/Home2';
-
+import VistaHCMed from './components/VistaHCMed';
 
 class Router extends Component {
     render() {
