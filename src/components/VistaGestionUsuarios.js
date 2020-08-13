@@ -31,16 +31,19 @@ return (
                 <div className="col-12">
                     <MenuAppBar/>
                     <br></br>
-                </div>                
+                </div>               
                 {/* Formulario de datos personales */}
                 <div className="col-12">
                 <h1>Datos del Usuario</h1>
                 <form>
                 <div class="form-row">
                 <div class="form-group col-md-4">
-    <label for="inputEmail">Email</label>
-    <input type="email" value="dariovergara@gmail.com" class="form-control" id="inputEmail"/>
-  </div>
+                <label for="inputGenero">Usuario</label>
+      <select id="inputGenero" class="form-control">
+        {/*<option selected>Seleccione...</option>*/}
+        <option selected>dariovergara@gmail.com</option>
+      </select>
+    </div>
     <div class="form-group col-md-4">
       <label for="inputPassword">Contraseña</label>
       <input type="text" value="**********" class="form-control" id="inputPassword"/>
