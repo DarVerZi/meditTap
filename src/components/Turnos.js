@@ -6,9 +6,18 @@ import VistaTurnosSec from './VistaTurnosSec';
 export default function Turnos(props) {
     var rol = props.pru;
   
-    return (
-      <div>
-        {rol}
-    </div>
-    );
+    if (rol==="secretaria") {
+      return <VistaTurnosSec/>;
+      }
+    else  if (rol==="paciente") {
+      return <VistaTurnosPac/>;
+      }
+    else  if (rol==="medico") {
+    return <VistaTurnosMed/>;
+    }
+  else{
+      return <VistaTurnosSec/> ;
+    };
+
+
 }
