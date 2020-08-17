@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuAppBar from './MenuAppBar2';
 import Button from '@material-ui/core/Button';
+import ComboBox from './ComboBox';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,16 +30,16 @@ return (
                     <MenuAppBar/>
                     <br></br>
                 </div>
-                {/* Alerta de nueva notificación */}
-                <div className="col-12">
-                <div class="alert alert-danger fade show" role="alert">
-                    <strong>Novedades!</strong> Hay una actualización en tu Historia Clínica.
-                    <br></br>
-                </div>
-                </div>
+        {/* Buscador de pacientes */}
+          <div className="col-12">
+            <div>
+              <ComboBox/>
+              <br></br>
+            </div>
+            <h1>Historia Clínica</h1>
+          </div>
                 {/* Formulario de datos personales */}
                 <div className="col-12">
-                <h1>Historia Clínica</h1>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
