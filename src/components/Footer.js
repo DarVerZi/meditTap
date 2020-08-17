@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import logoClaro from './medictapClaro.png';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -12,18 +13,22 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
 
     return (
-    <div className="container-fluid">
         <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid item xs={3}>
-                    {/*<p>Aquí va el logo chiquito en blanco (en proceso)</p>*/}
-                </Grid>
-                <Grid item xs={9}>
-                    {/*<p>LEA ATENTAMENTE LOS SIGUIENTES TÉRMINOS Y CONDICIONES DE USO DEL SISTEMA DE TURNOS WEB. VERSIÓN VIGENTE 13/07/2020:
-Este contrato describe los términos y condiciones generales (los "Términos y Condiciones Generales") aplicables al uso de los servicios ofrecidos por Institutos Médicos S.A – Sanatorio Clínica Modelo Morón , CUIT 30- 54584921-2, ("los Servicios") dentro del  Cualquier persona (en adelante "Usuario" o en plural "Usuarios") que desee acceder y/o usar el sitio o los Servicios podrá hacerlo sujetándose a los Términos y Condiciones Generales respectivos, junto con todas las demás políticas y principios que los rigen y que son incorporados al presente por referencia. CUALQUIER PERSONA QUE NO ACEPTE ESTOS TÉRMINOS Y CONDICIONES GENERALES, LOS CUALES TIENEN UN CARÁCTER OBLIGATORIO Y VINCULANTE, DEBERÁ ABSTENERSE DE UTILIZAR EL PORTAL, el Usuario debe leer, entender y aceptar todas las condiciones establecidas en los Términos y Condiciones Generales y en las Políticas de Privacidad, así como en los demás documentos incorporados a los mismos por referencia, previo a su registración como Usuario.</p>*/}
-                </Grid>
-            </Grid>
+        <div className="container-fluid">
+            <div className="row">
+            <div className="col-12">
+                <div class="form-row">
+  <div class="form-group col-md-3">
+  <img src={logoClaro} alt="Logo" width="150px"/>
+  </div>
+  <div class="form-group col-md-9">
+  <p>© 2020 MedicTap | INDEPENDENTLY OWNED AND OPERATED | Privacidad | Términos y Codiciones</p>
+  <p>Av. Warnes 932, 3º "9", C1414AAW, CABA, Argentina | Lunes a Viernes de 9hs a 16hs | Email: medictap@gmail.com | Teléfono: 5411 4123 1234</p>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
         </div>
-    </div>
     );
 }

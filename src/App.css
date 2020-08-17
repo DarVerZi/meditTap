@@ -37,10 +37,10 @@
 .App-footer {
   min-height: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  
+  text-align: center;
   background-color: #991B1E;
-  font-size: 8pt;
+  font-size: 10pt;
   color: #FFFFFF;
   width: 100%;
 }

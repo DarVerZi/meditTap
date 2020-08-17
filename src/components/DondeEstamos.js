@@ -8,7 +8,7 @@ class DondeEstamos extends React.Component {
            <div className="col-12">
                <div class="form-row">
                    <div class="form-group col-md-6">
-                     <img src={mapa} alt="mapa-villacrespo" height="100%" width="100%"/>
+                     <img src={mapa} alt="mapa-villacrespo" height="80%" width="80%"/>
                    </div>
                    <div class="form-group col-md-6">
                        <p>Nos encontramos en el barrio de Villa Crespo, CABA</p>
