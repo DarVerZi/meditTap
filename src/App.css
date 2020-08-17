@@ -17,8 +17,11 @@
   background-color: #F6ECEA;
   min-height: 10px;
   display: flex;
+  text-align: center;
   align-items: center;
   width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000000;
@@ -37,10 +40,10 @@
 .App-footer {
   min-height: 10px;
   display: flex;
-  
   text-align: center;
   background-color: #991B1E;
   font-size: 10pt;
+  padding-top: 15px;
   color: #FFFFFF;
   width: 100%;
 }

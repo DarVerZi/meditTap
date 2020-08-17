@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import logoClaro from './medictapClaro.png';
 
 const useStyles = makeStyles((theme) => ({

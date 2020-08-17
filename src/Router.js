@@ -1,10 +1,8 @@
-import React, { component, Component } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 //import Intra from './components/Intra';
 import VistaGestionUsuarios from './components/VistaGestionUsuarios';
-import ResponsiveDrawer from './components/ResponsiveDrawer';
 import Recetas from './components/Recetas';
-import VistaHCPac from './components/VistaHCPac';
 import HistoriaClinica from './components/HistoriaClinica';
 import Error from './components/Error';
 import Turnos from './components/Turnos';
@@ -12,19 +10,15 @@ import Login from './components/Login';
 import Registrar from './components/Registrar';
 import Home1 from './components/Home1';
 import Home2 from './components/Home2';
-import CenteredGrid from './components/Home2';
-import VistaHCMed from './components/VistaHCMed';
-import VistaRecetasPac from './components/VistaRecetasPac';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 class Router extends Component {
     render() {
         return (
             <BrowserRouter>
                 <header className="App-header">
-                <div className="container" justify = "center" alignItems = "center">
-                        <img src="https://www.brandbucket.com/sites/default/files/logo_uploads/259178/large_medictap.png" height="80px" width="180px"/>
-                    </div>
+                <Header/>
                 </header>
                 <body className="App-body">
                 <Switch>
