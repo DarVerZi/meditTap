@@ -52,14 +52,14 @@ const useStyles = theme => ({
   // backgroundRepeat: 'no-repeat',
   // backgroundSize: 'cover',
   // backgroundPosition: 'center',
-  backgroundColor: '#151719',
+  backgroundColor: '#d4d4d4',
   },
 });
 class Ingreso extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      email: "",
+      dni: "",
       password: "",
       rol: "medico",
       rol1: "admin",
@@ -72,7 +72,7 @@ class Ingreso extends React.Component{
 
   //Capturar el mail y pwd cuando la ingresas en el estao
   presionarBotonLogin = () => {
-      if (this.state.email==="medico@medictap.com" && this.state.password==="123") {
+      if (this.state.dni==="medico@medictap.com" && this.state.password==="123") {
         console.log(this.state.rol)
         this.props.history.push({
           pathname: '/home/medico',
@@ -82,7 +82,7 @@ class Ingreso extends React.Component{
                
       });
 
-    } else if (this.state.email==="admin@medictap.com" && this.state.password==="123") {
+    } else if (this.state.dni==="admin@medictap.com" && this.state.password==="123") {
           console.log(this.state.rol1)
             this.props.history.push({
               pathname: '/home/admin',
@@ -90,7 +90,7 @@ class Ingreso extends React.Component{
                 rol1: this.state.rol1
               }
           });
-    }else if (this.state.email==="secretaria@medictap.com" && this.state.password==="123"){
+    }else if (this.state.dni==="secretaria@medictap.com" && this.state.password==="123"){
           console.log(this.state.rol2)
             this.props.history.push({
               pathname: '/home/secretaria',
@@ -98,7 +98,7 @@ class Ingreso extends React.Component{
                 rol: this.state.rol2
               }
             });
-    }else if (this.state.email==="paciente@medictap.com" && this.state.password==="123"){
+    }else if (this.state.dni==="paciente@medictap.com" && this.state.password==="123"){
             console.log(this.state.rol3)
             this.props.history.push({
               pathname: '/home/paciente',
@@ -114,9 +114,9 @@ class Ingreso extends React.Component{
 
  
 
-  cambiarTextoEmail = (event) => {
+  cambiarTextoDni = (event) => {
     this.setState({
-      email: event.target.value,
+      dni: event.target.value,
     });
   };
   cambiarTextoPassword = (event) => {
@@ -133,7 +133,7 @@ class Ingreso extends React.Component{
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <Typography component="h1" variant="h5" >
           Ingresar
         </Typography>
         <form className={classes.form} noValidate>
@@ -142,11 +142,11 @@ class Ingreso extends React.Component{
             margin="normal"
             required
             fullWidth
-            id="email"
-            label="Correo electrónico"
-            name="email"
-            autoComplete="email"
-            onChange={this.cambiarTextoEmail}
+            id="dni"
+            label="DNI"
+            name="dni"
+            autoComplete="dni"
+            onChange={this.cambiarTextoDni}
             autoFocus
             color="secondary"
             style={{

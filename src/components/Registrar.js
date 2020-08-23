@@ -13,18 +13,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -44,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  color: {
+    margin: '0% auto ',
+    backgroundColor: '#d4d4d4',
+    },
 }));
 
 export default function SignUp() {
@@ -57,20 +49,20 @@ export default function SignUp() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign up
+          Registrarse
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
-                autoComplete="fname"
-                name="firstName"
+                autoComplete="nombre"
+                name="nombre"
                 variant="outlined"
                 required
                 fullWidth
-                id="firstName"
+                id="nombre"
                 color="secondary"
-                label="First Name"
+                label="Nombre"
                 autoFocus
               />
             </Grid>
@@ -79,11 +71,23 @@ export default function SignUp() {
                 variant="outlined"
                 required
                 fullWidth
-                id="lastName"
-                label="Last Name"
+                id="apellido"
+                label="Apellido"
                 color="secondary"
-                name="lastName"
+                name="apellido"
                 autoComplete="lname"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="dni"
+                color="secondary"
+                label="DNI"
+                name="dni"
+                autoComplete="dni"
               />
             </Grid>
             <Grid item xs={12}>
@@ -93,7 +97,7 @@ export default function SignUp() {
                 fullWidth
                 id="email"
                 color="secondary"
-                label="Email Address"
+                label="Correo Electronico"
                 name="email"
                 autoComplete="email"
               />
@@ -104,7 +108,7 @@ export default function SignUp() {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Contraseña"
                 type="password"
                 id="password"
                 color="secondary"
@@ -114,7 +118,7 @@ export default function SignUp() {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="Quiero recibir novedades por correo electrónico."
               />
             </Grid>
           </Grid>
@@ -125,20 +129,18 @@ export default function SignUp() {
             color="secondary"
             className={classes.submit}
           >
-            Sign Up
+            Registrarse
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
               <Link href="Login" variant="body2" color="secondary">
-                Already have an account? Sign in
+                Ya se encuentra registrado? Ingrese aqui
               </Link>
             </Grid>
           </Grid>
         </form>
       </div>
-      <Box mt={5}>
-        <Copyright />
-      </Box>
+
     </Container>
   );
 }
