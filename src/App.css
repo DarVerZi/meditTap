@@ -32,6 +32,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: calc(10px + 2vmin);
   color: #000000;
   width: 100%;

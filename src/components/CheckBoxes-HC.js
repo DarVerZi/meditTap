@@ -1,6 +1,7 @@
 import React from 'react';
 export default function HCCheckBoxes() {
 
+    //No se usa
 
     return (
         <div>

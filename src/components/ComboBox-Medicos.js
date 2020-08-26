@@ -9,8 +9,8 @@ export default function ComboBox2() {
       id="combo-box-demo"
       options={top100Films}
       getOptionLabel={(option) => option.title}
-      style={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Medico" variant="outlined" />}
+      style={{ width: "80%" }}
+      renderInput={(params) => <TextField {...params} label="Medico" variant="outlined" color="secondary" />}
     />
   );
 }

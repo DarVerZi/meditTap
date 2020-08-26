@@ -20,8 +20,9 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  export default function VistaTurnosSec() {
+  export default function VistaTurnosSec(props) {
     const classes = useStyles();
+    var rol = props.pru;
 
 return (
     <div className={classes.root}>
@@ -29,12 +30,12 @@ return (
             <div className="row">
             {/* Barra con menú y logout */}
                 <div className="col-12">
-                    <MenuAppBar/>
+                    <MenuAppBar rol={rol}/>
                     <br></br>
                 </div>
                 {/* Buscador de pacientes */}
                 <div className="col-12">
-                <h1>Asignar Turno</h1>
+                <p><strong>Asignar Turno</strong></p>
                 <div class="form-row">
     <div class="form-group col-md-3">
     <ComboBox2/>
@@ -67,7 +68,7 @@ return (
   </div></div></div>
                 </div>
                 {/*Tabla de recetas*/}
-                <h1>Historial de Turnos</h1>
+                <p><strong>Historial de Turnos</strong></p>
                 <table class="table table-striped">
   <thead>
     <tr>

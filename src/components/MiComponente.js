@@ -1,5 +1,7 @@
 import React from 'react';
 
+//No se usa
+
 class MiComponente extends React.Component {
 
     render () {

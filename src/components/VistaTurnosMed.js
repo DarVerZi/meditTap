@@ -5,6 +5,7 @@ import ComboBox2 from './ComboBox-Medicos';
 import ComboBox3 from './ComboBox-Horario';
 import MenuAppBar from './MenuAppBar2';
 import DatePicker from './DatePicker-TS';
+import CalendarTurno from './CalendarTurno';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,10 +35,12 @@ return (
                 </div>
                 {/* Buscador de pacientes */}
                 <div className="col-12">
-                <h1>Asignar Turno</h1>
-                <div class="form-row">
-  <div class="form-group col-md-6">
-  <ComboBox/>
+                <h2>Asignar Turno</h2>
+                <ComboBox/>
+                </div>
+                {/*<div class="form-row">
+    <div class="form-group col-md-6">
+    
   </div>
   <div class="form-group col-md-2">
   <DatePicker/>
@@ -46,7 +49,12 @@ return (
   <ComboBox3/>
   </div>
   </div>
-</div>
+  </div>*/}
+  <div className="col-12">
+  <div>
+  <CalendarTurno/>
+  </div>
+  </div>
 <div className="col-12"> 
  <div class="form-row">
   <div class="form-group col-md-3">

@@ -12,7 +12,7 @@ const theme = createMuiTheme({
   }
 });
 
-export default function ComboBoxUsuario() {
+export default function ComboBoxEspe() {
   const theme = createMuiTheme();
   return (
     
@@ -21,12 +21,12 @@ export default function ComboBoxUsuario() {
       options={top100Films}
       getOptionLabel={(option) => option.name}
       style={{ width: "80%" }}
-      renderInput={(params) => <TextField {...params} label="Usuarios" variant="outlined" color="secondary" />}
+      renderInput={(params) => <TextField {...params} label="Especialidades" variant="outlined" color="secondary" />}
     />
   );
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
-  { name: 'dariovergara@gmail.com'},
+  { name: 'Dario Vergara'},
 ];

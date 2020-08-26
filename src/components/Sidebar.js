@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+//No se usa
+
 class Sidebar extends Component{
     render(){
         return(

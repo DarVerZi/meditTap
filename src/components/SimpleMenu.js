@@ -60,6 +60,7 @@ export default function SimpleMenu(props) {
             </div>
         );
     }
+    
     else {
         return (
             <div>
@@ -84,4 +85,3 @@ export default function SimpleMenu(props) {
 
     }
 }
-//export default SimpleMenu(); 

@@ -2,6 +2,8 @@ import React from 'react';
 import VistaTurnosPac from './VistaTurnosPac';
 import VistaTurnosMed from './VistaTurnosMed';
 import VistaTurnosSec from './VistaTurnosSec';
+import VistaHorarios from './VistaHorarios';
+
 
 export default function Turnos(props) {
     var rol = props.pru;
@@ -13,7 +15,7 @@ export default function Turnos(props) {
     return <VistaTurnosMed/>;
     }
   else{
-      return <VistaTurnosSec/> ;
+      return <VistaTurnosSec rol={rol}/> ;
     };
 
 

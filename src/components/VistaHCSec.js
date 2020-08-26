@@ -232,8 +232,8 @@ return (
   {/*Solo checkBoxes a partir de aquí*/}
   <div class="form-group row">
     <div class="col-sm-3">
-      <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1" defaultChecked= "true" />
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1" defaultChecked= "true" disabled="true"/>
         <label class="form-check-label" for="gridCheck1">
           Alergias
         </label>
@@ -241,24 +241,24 @@ return (
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck2" disabled="true"/>
+        <label class="form-check-label" for="gridCheck2">
           Infartos
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck3" disabled="true"/>
+        <label class="form-check-label" for="gridCheck3">
           Soplo cardíaco
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck4" disabled="true"/>
+        <label class="form-check-label" for="gridCheck4">
           Diabetes
         </label>
       </div>
@@ -267,32 +267,32 @@ return (
   <div class="form-group row">
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck5" disabled="true"/>
+        <label class="form-check-label" for="gridCheck5">
           Fiebre reumática
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck6" disabled="true"/>
+        <label class="form-check-label" for="gridCheck6">
           Anemia
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck7" disabled="true"/>
+        <label class="form-check-label" for="gridCheck7">
           Tuberculosis
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" disabled="true" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck8" disabled="true"/>
+        <label class="form-check-label" for="gridCheck8">
           Artrosis
         </label>
       </div>

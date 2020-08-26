@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -12,21 +11,22 @@ const theme = createMuiTheme({
   }
 });
 
-export default function ComboBoxUsuario() {
+export default function DuracionTurnos() {
   const theme = createMuiTheme();
   return (
     
     <Autocomplete
       id="combo-box-demo"
-      options={top100Films}
+      options={intervalos}
       getOptionLabel={(option) => option.name}
-      style={{ width: "80%" }}
-      renderInput={(params) => <TextField {...params} label="Usuarios" variant="outlined" color="secondary" />}
+      style={{ width: "100%" }}
+      renderInput={(params) => <TextField {...params} label="Pacientes" variant="outlined" color="secondary" />}
     />
   );
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = [
-  { name: 'dariovergara@gmail.com'},
+const intervalos = [
+  { name: '30 min'},
+  { name: '60 min'},
 ];

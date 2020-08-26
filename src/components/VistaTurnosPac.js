@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import ComboBox from './ComboBox';
+import ComboBoxEspe from './ComboBoxEspe';
 import ComboBox2 from './ComboBox-Medicos';
 import ComboBox3 from './ComboBox-Horario';
 import MenuAppBar from './MenuAppBar2';
 import DatePicker from './DatePicker-TS';
+import  CalendarTurno from './CalendarTurno';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,18 +35,26 @@ return (
                 </div>
                 {/* Buscador de pacientes */}
                 <div className="col-12">
-                <h1>Elegir Turno</h1>
+                <h2>Elegir Turno</h2>
                 <div class="form-row">
+                <div class="form-group col-md-6">
+                  <ComboBoxEspe/>
+                </div>
     <div class="form-group col-md-6">
     <ComboBox2/>
   </div>
-  <div class="form-group col-md-2">
+  </div>
+  <div className="col-12">
+  <div>
+  <CalendarTurno/>
+  </div>
+  </div>
+  {/*<div class="form-group col-md-2">
   <DatePicker/>
   </div>
   <div class="form-group col-md-4">
   <ComboBox3/>
-  </div>
-  </div>
+  </div>*/}
 </div>
 <div className="col-12"> 
  <div class="form-row">

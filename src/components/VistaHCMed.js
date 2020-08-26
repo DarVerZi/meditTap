@@ -243,24 +243,24 @@ return (
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck2"/>
+        <label class="form-check-label" for="gridCheck2">
           Infartos
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck3"/>
+        <label class="form-check-label" for="gridCheck3">
           Soplo cardíaco
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck4"/>
+        <label class="form-check-label" for="gridCheck4">
           Diabetes
         </label>
       </div>
@@ -269,32 +269,32 @@ return (
   <div class="form-group row">
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck5"/>
+        <label class="form-check-label" for="gridCheck5">
           Fiebre reumática
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck6"/>
+        <label class="form-check-label" for="gridCheck6">
           Anemia
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck7"/>
+        <label class="form-check-label" for="gridCheck7">
           Tuberculosis
         </label>
       </div>
     </div>
     <div class="col-sm-3">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck1"/>
-        <label class="form-check-label" for="gridCheck1">
+        <input class="form-check-input" type="checkbox" id="gridCheck8"/>
+        <label class="form-check-label" for="gridCheck8">
           Artrosis
         </label>
       </div>
