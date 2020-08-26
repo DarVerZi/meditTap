@@ -1,21 +1,17 @@
 import React from 'react';
-import IconLabelButtons from './IconLabelButtons';
-import CheckboxList from './CheckboxList';
-import ComboBox from './ComboBox';
-import ComboBoxDynamic from './ComboBoxDynamic';
+import VistaRecetasPac from './VistaRecetasPac';
+import VistaRecetasMed from './VistaRecetasMed';
 
-export default function Recetas() {
+export default function Recetas(props) {
+    const valor = props.pru;
     
-  
-    return (
-  
+    if (valor==="paciente") {
+        return <VistaRecetasPac/>;
+        }
+    else{
+        return <VistaRecetasMed/> ;
+      };
+    
+        
 
-    <div>
-        <ComboBoxDynamic/>
-
-        <CheckboxList/>
-       
-        <IconLabelButtons/>
-    </div>
-    );
 }

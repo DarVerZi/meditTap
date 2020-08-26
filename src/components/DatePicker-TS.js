@@ -1,8 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import EventAvailableIcon from '@material-ui/icons/EventAvailable';
-import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -30,16 +28,7 @@ export default function DatePicker() {
                 InputLabelProps={{
                     shrink: true,
                 }}
-
             />
-            <Button
-                variant="contained"
-                color="default"
-                className={classes.button}
-                startIcon={<EventAvailableIcon />}
-            >
-                Reservar
-      </Button>
         </form>
     );
 }

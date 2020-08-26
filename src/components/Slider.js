@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+//No se usa
 class Slider extends Component {
 
     render() {

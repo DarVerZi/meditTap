@@ -3,14 +3,14 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-export default function ComboBox() {
+export default function ComboBox2() {
   return (
     <Autocomplete
       id="combo-box-demo"
       options={top100Films}
       getOptionLabel={(option) => option.title}
-      style={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Medico" variant="outlined" />}
+      style={{ width: "80%" }}
+      renderInput={(params) => <TextField {...params} label="Medico" variant="outlined" color="secondary" />}
     />
   );
 }

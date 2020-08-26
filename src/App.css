@@ -17,9 +17,11 @@
   background-color: #F6ECEA;
   min-height: 10px;
   display: flex;
-  flex-direction: column;
+  text-align: center;
   align-items: center;
   width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000000;
@@ -28,9 +30,10 @@
 .App-body {
   min-height: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: calc(10px + 2vmin);
   color: #000000;
   width: 100%;
@@ -39,11 +42,10 @@
 .App-footer {
   min-height: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   background-color: #991B1E;
-  font-size: 12pt;
+  font-size: 10pt;
+  padding-top: 15px;
   color: #FFFFFF;
   width: 100%;
 }
@@ -58,5 +60,26 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width:700px) {
+  .App-header  {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    position: static;
+  }
+  .App-body {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    position: static;
+  }
+  .App-footer{
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    position: static;
   }
 }

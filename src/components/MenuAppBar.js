@@ -10,15 +10,17 @@ import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
+import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
 import SimpleMenu from './SimpleMenu';
-
+import { NavLink } from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     backgroundColor: "#991B1E",
+    width: "100%",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -54,8 +56,6 @@ export default function MenuAppBar() {
         <AppBar position="static" className={classes.root}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-              {/*<MenuIcon />*/}
-              <SimpleMenu />
               </IconButton>
 
             <Typography variant="h6" className={classes.title}>
@@ -85,9 +85,9 @@ export default function MenuAppBar() {
                   }}
                   open={open}
                   onClose={handleClose}
-                >
-                  <MenuItem onClick={handleClose}>Profile</MenuItem>
-                  <MenuItem onClick={handleClose}>My account</MenuItem>
+                > 
+                  <MenuItem onClick={handleClose}><NavLink to="/Login">Login</NavLink></MenuItem>
+                  <MenuItem onClick={handleClose}><NavLink to="/Registrar">Registrarse</NavLink></MenuItem>
                 </Menu>
               </div>
             )}

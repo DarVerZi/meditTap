@@ -1,22 +1,22 @@
 import React from 'react';
-import DatePicker from './DatePicker-TS'
-import BasicDatePicker from './DatePicker-TS2';
+import VistaTurnosPac from './VistaTurnosPac';
+import VistaTurnosMed from './VistaTurnosMed';
+import VistaTurnosSec from './VistaTurnosSec';
+import VistaHorarios from './VistaHorarios';
 
- 
 
-
-export default function Turnos() {
-    
+export default function Turnos(props) {
+    var rol = props.pru;
   
-    return (
-  
+    if (rol==="paciente") {
+      return <VistaTurnosPac/>;
+      }
+    else  if (rol==="medico") {
+    return <VistaTurnosMed/>;
+    }
+  else{
+      return <VistaTurnosSec rol={rol}/> ;
+    };
 
-    <div>
-        
-        <DatePicker/>
-        
 
-
-    </div>
-    );
 }
