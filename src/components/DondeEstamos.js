@@ -1,5 +1,8 @@
 import React from 'react';
-import mapa from './mapa-medictap.png';
+import Map from './GoogleMap';
+import credentials from './CredentialsApiMap';
+
+const mapURL = `https://maps.googleapis.com/maps/api/js?v=3.exp&key=${credentials.mapsKey}`;
 
 class DondeEstamos extends React.Component {
 
@@ -8,12 +11,18 @@ class DondeEstamos extends React.Component {
            <div className="col-12">
                <div class="form-row">
                    <div class="form-group col-md-6">
-                     <img src={mapa} alt="mapa-villacrespo" height="80%" width="80%"/>
+                    <Map
+                        googleMapURL= {mapURL}
+                        containerElement= {<div style={{height: '400px'}}/>}
+                        mapElement= {<div style={{height:'100%'}}/>}
+                        loadingElement= {<p>CARGANDO</p>}
+                        initMap
+                    />
                    </div>
                    <div class="form-group col-md-6">
                        <p>Nos encontramos en el barrio de Villa Crespo, CABA</p>
-                       <p>Av. Warnes 932, 3º "9" (A media cuadra de Warnes y Juan B.Justo)</p>
-                       <p>Estamos a 7/8 cuadras de la estación de subte B Malabia-Osvaldo Pugliese</p>
+                       <p>Av. Warnes 397, 3º "9" - Esquina Scalabrini Ortiz</p>
+                       <p>Estamos a 5 cuadras del Parque Centenario</p>
                    </div>
                </div>
            </div>
