@@ -31,8 +31,9 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function MenuAppBar(props) {
-  const rol = props.rol;
+export default function MenuAppBar() {
+  const rol = localStorage.getItem('rol');
+  
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -57,7 +58,9 @@ export default function MenuAppBar(props) {
         <AppBar position="static" className={classes.root}>
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <SimpleMenu rol={rol}/>
+            {localStorage.getItem('rol')}
+
+            <SimpleMenu/>
               {/*<MenuIcon />
               <div class="d-flex flex-row bd-highlight mb-3">
               <ul class="nav">

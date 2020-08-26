@@ -23,8 +23,8 @@ const myTheme = createMuiTheme({
     },
 });*/
 
-export default function SimpleMenu(props) {
-    const rol = props.rol;
+export default function SimpleMenu() {
+    const rol = localStorage.getItem('rol');
     /*const classes = createStyles();*/
     
     const [anchorEl, setAnchorEl] = React.useState(0);
@@ -50,11 +50,11 @@ export default function SimpleMenu(props) {
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
                 >
-                    <MenuItem onClick={handleClose}><NavLink to={"/Home/"+rol}>Home</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/GestionDeUsuarios/"+rol}>Gestion De Usuarios</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos/"+rol}>Turnos</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica/"+rol}>Historia Clinica</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas/"+rol}>Recetas</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Home"}>Home</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/GestionDeUsuarios"}>Gestion De Usuarios</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos"}>Turnos</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica"}>Historia Clinica</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas"}>Recetas</NavLink></MenuItem>
                     
                 </Menu>
             </div>
@@ -73,10 +73,10 @@ export default function SimpleMenu(props) {
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
                 >
-                    <MenuItem onClick={handleClose}><NavLink to={"/Home/"+rol}>Home</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos/"+rol}>Turnos</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica/"+rol}>Historia Clinica</NavLink></MenuItem>
-                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas/"+rol}>Recetas</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Home"}>Home</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos"}>Turnos</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica"}>Historia Clinica</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas"}>Recetas</NavLink></MenuItem>
                     
                 </Menu>
             </div>

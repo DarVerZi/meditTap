@@ -12,11 +12,13 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from "@material-ui/core/styles";
-//import AlertDialog from './AlertDialog';
+//import AlertDialog from './AlertDialog'; 
 //import AlertDialog from './AlertDialog';
 import {withRouter} from 'react-router-dom';
 import MiComponente from './MiComponente';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {loginGrupo} from "../controllers/medictap.controller.js";
+
 
  
 
@@ -55,6 +57,66 @@ const useStyles = theme => ({
   backgroundColor: '#d4d4d4',
   },
 });
+
+const validarLogin = async function () {
+  let login = {
+    dni: this.state.dni,
+    pass: this.state.password
+  }
+  
+  let getLogin = await loginGrupo(login);
+  if (getLogin.rdo===0) {
+     alert("Hola " + localStorage.getItem("nombre") + " !!! Bienvenido zapallo");
+     
+     if (localStorage.getItem("nombre")==="medico") {
+          console.log(this.state.rol)
+          localStorage.setItem('rol', this.state.rol);
+          this.props.history.push({
+            pathname: '/home',
+            state: {
+              rol: this.state.rol
+            }      
+        }
+        );
+    }
+    else if (localStorage.getItem("nombre")==="admin") {
+          console.log(this.state.rol1)
+          localStorage.setItem("rol", this.state.rol1);
+          this.props.history.push({
+          pathname: '/home',
+          state: {
+            rol1: this.state.rol1
+          }
+      });
+    }
+    else if (localStorage.getItem("nombre")==="secretaria") {
+        console.log(this.state.rol2)
+        localStorage.setItem('rol', this.state.rol2);
+        this.props.history.push({
+          pathname: '/home',
+          state: {
+            rol: this.state.rol2
+          }
+        });
+    }
+    else if (localStorage.getItem("nombre")==="paciente") {
+        console.log(this.state.rol3)
+        localStorage.setItem('rol', this.state.rol3);
+        this.props.history.push({
+          pathname: '/home',
+          state: {
+            rol: this.state.rol3
+          }
+        });
+      }
+    else {
+        this.setState({fallo: true})
+        localStorage.clear(); //limpia las variables
+      }
+  }
+};
+
+
 class Ingreso extends React.Component{
   constructor(props){
     super(props);
@@ -70,50 +132,18 @@ class Ingreso extends React.Component{
     }
   }
 
-  //Capturar el mail y pwd cuando la ingresas en el estao
-  presionarBotonLogin = () => {
-      if (this.state.dni==="medico@medictap.com" && this.state.password==="123") {
-        console.log(this.state.rol)
-        this.props.history.push({
-          pathname: '/home/medico',
-          state: {
-            rol: this.state.rol
-          }
-               
-      });
+    //Capturar el mail y pwd cuando la ingresas en el estao
+    presionarBotonLogin = () => {
 
-    } else if (this.state.dni==="admin@medictap.com" && this.state.password==="123") {
-          console.log(this.state.rol1)
-            this.props.history.push({
-              pathname: '/home/admin',
-              state: {
-                rol1: this.state.rol1
-              }
-          });
-    }else if (this.state.dni==="secretaria@medictap.com" && this.state.password==="123"){
-          console.log(this.state.rol2)
-            this.props.history.push({
-              pathname: '/home/secretaria',
-              state: {
-                rol: this.state.rol2
-              }
-            });
-    }else if (this.state.dni==="paciente@medictap.com" && this.state.password==="123"){
-            console.log(this.state.rol3)
-            this.props.history.push({
-              pathname: '/home/paciente',
-              state: {
-                rol: this.state.rol3
-              }
-            });
-    }else
-    {
-        this.setState({fallo: true})
+      if (this.state.dni!=="" && this.state.password!=="") {
+        validarLogin();
+      }   else {
+        alert("Debe completar su DNI y contraseña");
       }
+
   };
 
  
-
   cambiarTextoDni = (event) => {
     this.setState({
       dni: event.target.value,

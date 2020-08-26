@@ -25,49 +25,42 @@ class Router extends Component {
                     {/*Configurar el route con render, nos permite enviar parametros con props */}
                     <Route exact path="/" component={Home1} />
                     
-                    <Route exact path="/home/:rol" render={(props) => {
-                        var rol = props.match.params.rol;
+                    <Route exact path="/home" render={() => {
                         return (
                             <div rol="content">
-                            <Home2 pru={rol}/>
+                            <Home2/>
                             </div>
                         );
                     }} />
-                    <Route exact path="/" component={Home1} />
                     
-                    <Route exact path="/GestionDeUsuarios/:rol" render={(props) => {
-                        var rol = props.match.params.rol;
+                    <Route exact path="/GestionDeUsuarios" render={() => {
                         return (
                             <div rol="content">
-                            <VistaGestionUsuarios pru={rol}/>
+                            <VistaGestionUsuarios/>
                             </div>
                         );
                     }} />
 
-                    <Route exact path="/Turnos/:rol" render={(props) => {
-                        var rol = props.match.params.rol;
+                    <Route exact path="/Turnos" render={() => {
                         return (
                             <div rol="content">
-                            <Turnos pru={rol}/>
+                            <Turnos/>
                             </div>
                         );
                     }} />
 
 
-                    {/*<Route exact path="/HistoriaClinica" component={HistoriaClinica} />*/}
-                    <Route exact path="/HistoriaClinica/:rol" render={(props) => {
-                        var rol = props.match.params.rol;
+                    <Route exact path="/HistoriaClinica" render={() => {
                         return (
                             <div rol="content">
-                            <HistoriaClinica pru={rol}/>
+                            <HistoriaClinica/>
                             </div>
                         );
                     }} />                    
-                    <Route exact path="/Recetas/:rol" render={(props) => {
-                        var rol = props.match.params.rol;
+                    <Route exact path="/Recetas" render={() => {
                         return (
                             <div rol="content">
-                            <Recetas pru={rol}/>
+                            <Recetas/>
                             </div>
                         );
                     }} />

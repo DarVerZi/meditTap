@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function CenteredGrid(props) {
-  var rol = props.pru;
+  var rol = localStorage.getItem('rol');
   const classes = useStyles();
   
  
@@ -28,7 +28,7 @@ export default function CenteredGrid(props) {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-           <MenuAppBar rol={rol}/>
+           <MenuAppBar/>
             <CarouselNov/>
             <FullWidthTabs/>
         </Grid>
