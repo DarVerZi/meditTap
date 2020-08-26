@@ -71,7 +71,7 @@ return (
   </div>
   </div></div></div>
                 </div>
-                {/*Tabla de recetas*/}
+                {/*Tabla de turnos*/}
                 <h1>Turnos Activos</h1>
                 <table class="table table-striped">
   <thead>

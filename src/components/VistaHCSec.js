@@ -80,14 +80,22 @@ return (
   </div>
   </div>
   <div class="form-row">
-    <div class="form-group col-md-6">
-    <label for="inputTelPrin">Telefono Principal</label>
-    <input type="text" disabled="true" value="54 011 1234 5678" class="form-control" id="inputTelPrin"/>
-  </div>
-  <div class="form-group col-md-6">
-    <label for="inputCel">Telefono Celular</label>
-    <input type="text" disabled="true" value="54 911 1234 5678" class="form-control" id="inputCel"/>
-  </div>
+  <div class="form-group col-md-3">
+                        <label for="inputTelPrin">Telefono Principal</label>
+                        <input type="text" value="54 011 1234 5678" class="form-control" id="inputTelPrin"/>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputCel">Telefono Celular</label>
+                        <input type="text" value="54 911 1234 5678" class="form-control" id="inputCel"/>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputTelPrin">Peso (kg)</label>
+                        <input type="text" class="form-control" id="inputPeso"/>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputCel">Altura (cm)</label>
+                        <input type="text" class="form-control" id="inputAltura"/>
+                      </div>
   </div>
   {/*<button type="submit" class="btn btn-primary">Sign in</button>*/}
 </form>

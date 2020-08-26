@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import ComboBox from './ComboBox';
+import ComboBoxEspe from './ComboBoxEspe';
 import ComboBox2 from './ComboBox-Medicos';
-import ComboBox3 from './ComboBox-Horario';
+import ComboBox from './ComboBox';
 import MenuAppBar from './MenuAppBar2';
 import DatePicker from './DatePicker-TS';
+import  CalendarTurno from './CalendarTurno';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,9 +21,8 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
   
-  export default function VistaTurnosSec(props) {
+  export default function VistaTurnosPac() {
     const classes = useStyles();
-    var rol = props.pru;
 
 return (
     <div className={classes.root}>
@@ -30,26 +30,34 @@ return (
             <div className="row">
             {/* Barra con menú y logout */}
                 <div className="col-12">
-                    <MenuAppBar rol={rol}/>
+                    <MenuAppBar/>
                     <br></br>
                 </div>
                 {/* Buscador de pacientes */}
                 <div className="col-12">
-                <p><strong>Asignar Turno</strong></p>
+                <h2>Elegir Turno</h2>
                 <div class="form-row">
-    <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
+    <ComboBox/>
+  </div>
+                <div class="form-group col-md-4">
+                  <ComboBoxEspe/>
+                </div>
+    <div class="form-group col-md-4">
     <ComboBox2/>
   </div>
-  <div class="form-group col-md-3">
-  <ComboBox/>
   </div>
-  <div class="form-group col-md-3">
+  <div className="col-12">
+  <div>
+  <CalendarTurno/>
+  </div>
+  </div>
+  {/*<div class="form-group col-md-2">
   <DatePicker/>
   </div>
-  <div class="form-group col-md-3">
+  <div class="form-group col-md-4">
   <ComboBox3/>
-  </div>
-  </div>
+  </div>*/}
 </div>
 <div className="col-12"> 
  <div class="form-row">
@@ -57,7 +65,7 @@ return (
   <p></p>
   </div>
   <div class="form-group col-md-3">
-  <button type="submit" class="btn btn-danger btn-lg">Asignar Turno</button>
+  <button type="submit" class="btn btn-danger btn-lg">Confirmar Turno</button>
   </div>
   <div class="form-group col-md-3">
   <button type="submit" class="btn btn-secondary btn-lg">Cancelar</button>
@@ -66,8 +74,38 @@ return (
   <p></p>
   </div>
   </div></div></div>
-                </div>
-                {/*Tabla de recetas*/}
+  {/*Turnos Activos*/}
+  <div className="col-12"> 
+  <h1>Mis Turnos</h1>
+ <div class="form-row">
+  <div class="form-group col-md-6">
+  <div class="card">
+  <div class="card-header">
+    Turno Confirmado
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Dr. Gomez</h5>
+    <p class="card-text">14/08/2020</p>
+    <p class="card-text">17:30</p>
+    <button class="btn btn-secondary btn-lg">Cancelar</button>
+  </div>
+</div>
+  </div>
+  <div class="form-group col-md-6">
+  <div class="card">
+  <div class="card-header">
+    Turno Confirmado
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Dr. Lopez</h5>
+    <p class="card-text">23/08/2020</p>
+    <p class="card-text">13:30</p>
+    <button class="btn btn-secondary btn-lg">Cancelar</button>
+  </div>
+</div>
+  </div>
+  </div></div></div>
+                {/*Tabla de turnos*/}
                 <p><strong>Historial de Turnos</strong></p>
                 <table class="table table-striped">
   <thead>

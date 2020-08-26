@@ -1,5 +1,5 @@
 import React from 'react';
-import VistaHorarios from './VistaHorarios';
+import VistaHCMed from './VistaHCMed';
 import VistaHCPac from './VistaHCPac';
 import VistaHCSec from './VistaHCSec';
 
@@ -13,7 +13,7 @@ export default function HistoriaClinica(props) {
       return <VistaHCPac/>;
       }
   else{
-      return <VistaHorarios/> ;
+      return <VistaHCMed/> ;
     };
 
     

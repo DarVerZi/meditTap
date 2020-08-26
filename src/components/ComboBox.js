@@ -21,7 +21,7 @@ export default function ComboBox() {
       options={top100Films}
       getOptionLabel={(option) => option.name}
       style={{ width: "80%" }}
-      renderInput={(params) => <TextField {...params} label="Pacientes" variant="outlined" color="secondary" />}
+      renderInput={(params) => <TextField {...params} label="Paciente" variant="outlined" color="secondary" />}
     />
   );
 }

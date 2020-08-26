@@ -21,7 +21,7 @@ export default function ComboBoxEspe() {
       options={top100Films}
       getOptionLabel={(option) => option.name}
       style={{ width: "80%" }}
-      renderInput={(params) => <TextField {...params} label="Especialidades" variant="outlined" color="secondary" />}
+      renderInput={(params) => <TextField {...params} label="Especialidad" variant="outlined" color="secondary" />}
     />
   );
 }
