@@ -62,6 +62,60 @@ export default function SimpleMenu() {
             </div>
         );
     }
+    else if (rol==="medico") {
+        return (
+            <div>
+                <Button aria-controls="simple-menu" aria-haspopup="true" variant="contained" color="secondary" onClick={handleClick}>
+                    Menu
+          </Button>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={handleClose}><NavLink to={"/Home"}>Home</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Perfil"}>Perfil</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Horarios"}>Horarios</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/GestionDeUsuarios"}>Gestion De Usuarios</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos"}>Turnos</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica"}>Historia Clinica</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas"}>Recetas</NavLink></MenuItem>
+                    
+                </Menu>
+            </div>
+        );
+
+
+    }
+    
+    else if (rol==="secretaria") {
+        return (
+            <div>
+                <Button aria-controls="simple-menu" aria-haspopup="true" variant="contained" color="secondary" onClick={handleClick}>
+                    Menu
+          </Button>
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={handleClose}><NavLink to={"/Home"}>Home</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Perfil"}>Perfil</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Horarios"}>Horarios</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/GestionDeUsuarios"}>Gestion De Usuarios</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Turnos"}>Turnos</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica"}>Historia Clinica</NavLink></MenuItem>
+                    <MenuItem onClick={handleClose}><NavLink to={"/Recetas"}>Recetas</NavLink></MenuItem>
+                    
+                </Menu>
+            </div>
+        );
+    }
+    
     
     else {
         return (

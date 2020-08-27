@@ -104,8 +104,19 @@ class Ingreso extends React.Component{
           }
                
       });
+      }
+      else if (this.state.dni==="234" && this.state.password==="medico") {
+        //console.log(this.state.rol)
+        localStorage.setItem("rol",this.state.rol); 
+        this.props.history.push({
+          pathname: '/home',
+          state: {
+            rol: this.state.rol
+          }
+               
+      });
 
-    } else if (this.state.dni==="admin@medictap.com" && this.state.password==="123") {
+    } else if (this.state.dni==="123" && this.state.password==="admin") {
           //console.log(this.state.rol1)
           localStorage.setItem("rol",this.state.rol1); 
             this.props.history.push({
@@ -114,7 +125,7 @@ class Ingreso extends React.Component{
                 rol1: this.state.rol1
               }
           });
-    }else if (this.state.dni==="secretaria@medictap.com" && this.state.password==="123"){
+    }else if (this.state.dni==="456" && this.state.password==="secretaria"){
           //console.log(this.state.rol2)
           localStorage.setItem("rol",this.state.rol2); 
             this.props.history.push({
@@ -123,7 +134,7 @@ class Ingreso extends React.Component{
                 rol: this.state.rol2
               }
             });
-    }else if (this.state.dni==="paciente@medictap.com" && this.state.password==="123"){
+    }else if (this.state.dni==="345" && this.state.password==="paciente"){
             //console.log(this.state.rol3)
             localStorage.setItem("rol",this.state.rol3); 
             this.props.history.push({
