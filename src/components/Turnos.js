@@ -3,7 +3,7 @@ import VistaTurnosPac from './VistaTurnosPac';
 import VistaTurnosMed from './VistaTurnosMed';
 import VistaTurnosSec from './VistaTurnosSec';
 //import VistaHorarios from './VistaHorarios';
-
+import Home1 from './Home1';
 
 export default function Turnos() {
     var rol = localStorage.getItem("rol");
@@ -11,12 +11,13 @@ export default function Turnos() {
     if (rol==="paciente") {
       return <VistaTurnosPac/>;
       }
-    else  if (rol==="medico") {
+    else  if (rol==="medico" || rol==="admin") {
     return <VistaTurnosMed/>;
     }
+    else  if (rol==="secretaria") {
+      return <VistaTurnosSec/>;
+      }
   else{
-      return <VistaTurnosSec/> ;
+      return <Home1/> ;
     };
-
-
 }

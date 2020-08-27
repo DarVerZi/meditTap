@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import FullWidthTabs from './TabPanel';
 import CarouselNov from './CarouselNov';
 import MenuAppBar from './MenuAppBar2';
+import Home1 from './Home1';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -18,21 +19,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function CenteredGrid() {
-  var rol = localStorage.getItem("rol");
   const classes = useStyles();
   
- 
-  return (
-    <div className="container-fluid">
-    <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-           <MenuAppBar/>
-            <CarouselNov/>
-            <FullWidthTabs/>
-        </Grid>
-      </Grid>
-    </div>
-    </div>
-  );
+  if (!localStorage.getItem("rol")) {
+    return <Home1/>
+  }
+  else {
+      return (
+        <div className="container-fluid">
+        <div className={classes.root}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <MenuAppBar/>
+                <CarouselNov/>
+                <FullWidthTabs/>
+            </Grid>
+          </Grid>
+        </div>
+        </div>
+      );
+  }
 }
