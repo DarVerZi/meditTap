@@ -1,11 +1,50 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-//import CardActions from '@material-ui/core/CardActions';
+import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import MenuAppBar from './MenuAppBar2';
-import Home1 from './Home1';
+import axios from 'axios';
+/*
+class Perfil extends React.Component{
+    constructor(props){
+      super(props);
+      this.state = {
+        dni:"",
+        nombre: "",
+        apellido: "",
+        mail: "",
+        password: "",
+        fechaNacimiento: "",
+        genero: "",
+        domicilio: "",
+        TelefonoCel: "",
+        TelefonoPri: "",
+      }
+    }
+      handleSubmit = async (e) => {
+        e.preventDefault();
+       localStorage.setItem('dni',this.state.dni)
+      const dni = this.state.dni;
+
+try {
+    const response = axios.get("/api/usuario/find/dni/:dni", {
+      dni,
+    });
+    this.presionarBotonPerfil(response);
+  } catch (err) {
+    console.log('Error');
+  }
+
+  presionarBotonPerfil = (response) => {
+    alert(response.data)
+        this.props.history.push({
+          pathname: '/Perfil',
+    }
+  }
+*/
+
 
 const useStyles = makeStyles({
   root: {
@@ -20,9 +59,9 @@ const useStyles = makeStyles({
 });
 
 
-export default function MiPerfil() {
+export default function MiPerfil(props) {
 
-    const rol = localStorage.getItem("rol");
+    const rol = props.rol;
     const classes = useStyles();
 
     if(rol==="paciente") {
@@ -34,7 +73,7 @@ export default function MiPerfil() {
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputNombre">Nombres</label>
-                        <input type="text" disabled="true" value="Dario Alberto" class="form-control" id="inputNombre"/>
+                        <input type="text" disabled="true" value='this.state.nombre' class="form-control" id="inputNombre"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputApellido">Apellidos</label>
@@ -85,7 +124,7 @@ export default function MiPerfil() {
         );
     }
     
-    else if(rol==="admin" || rol==="medico" ||  rol==="secretaria" )  {
+    else {
 
         return (
             <div className={classes.root}>
@@ -153,8 +192,4 @@ export default function MiPerfil() {
             </div>
         );
     }
-    else {
-        return <Home1/>
-    }
-
 }
