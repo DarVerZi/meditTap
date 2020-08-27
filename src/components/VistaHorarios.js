@@ -4,7 +4,7 @@ import MenuAppBar from './MenuAppBar2';
 import DeleteIcon from '@material-ui/icons/Delete';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import Button from '@material-ui/core/Button';
-//import DiasSemana from './DiasSemana';
+import MultiCheckBox from './DiasSemana';
 //import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -45,8 +45,6 @@ const useStyles = makeStyles((theme) => ({
     setState({ ...state, [event.target.name]: event.target.checked });
   };
 
-  const dias = [{dia: 1}, {dia: 2}, {dia: 3}, {dia: 4}, {dia: 5}, {dia: 6}];
-
 if (rol==="medico") {
     return (
         <div className={classes.root}>
@@ -63,35 +61,7 @@ if (rol==="medico") {
                   <form>
                   <div class="form-row">
                     <div class="form-group col-md-4">
-                    <FormControl component="fieldset" className={classes.formControl} error>
-            <FormGroup row>
-              <FormControlLabel
-                control={<Checkbox checked={state.lunes} onChange={handleChange} name="lunes"/>}
-                label="Lunes"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={state.martes} onChange={handleChange} name="martes"/>}
-                label="Martes"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={state.miercoles} onChange={handleChange} name="miercoles"/>}
-                label="Miercoles"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={state.jueves} onChange={handleChange} name="jueves"/>}
-                label="Jueves"
-              />
-              <FormControlLabel
-                control={<Checkbox checked={state.viernes} onChange={handleChange} name="viernes"/>}
-                label="Viernes"
-              />
-                        <FormControlLabel
-                control={<Checkbox checked={state.sabado} onChange={handleChange} name="sabado"/>}
-                label="Sabado"
-              />
-            </FormGroup>
-          </FormControl>
-                      {/*<DiasSemana/>*/}
+                      <MultiCheckBox/>
                     </div>
                     <div class="form-group col-md-4">
                       <StartTime/>
