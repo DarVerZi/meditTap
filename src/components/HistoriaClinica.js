@@ -3,8 +3,8 @@ import VistaHCMed from './VistaHCMed';
 import VistaHCPac from './VistaHCPac';
 import VistaHCSec from './VistaHCSec';
 
-export default function HistoriaClinica(props) {
-    const valor = props.pru;
+export default function HistoriaClinica() {
+    const valor = localStorage.getItem("rol");
     
     if (valor==="secretaria") {
       return <VistaHCSec/>;

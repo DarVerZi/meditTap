@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home1() {
   const classes = useStyles();
-
+  localStorage.clear();
   return (
     <div className="container-fluid">
     <div className={classes.root}>

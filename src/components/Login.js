@@ -1,22 +1,23 @@
+//login
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+//import FormControlLabel from '@material-ui/core/FormControlLabel';
+//import Checkbox from '@material-ui/core/Checkbox';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+//import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+//import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from "@material-ui/core/styles";
 //import AlertDialog from './AlertDialog';
 //import AlertDialog from './AlertDialog';
-import {withRouter} from 'react-router-dom';
-import MiComponente from './MiComponente';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+//import {withRouter} from 'react-router-dom';
+//import MiComponente from './MiComponente';
+//import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
  
 
@@ -73,9 +74,10 @@ class Ingreso extends React.Component{
   //Capturar el mail y pwd cuando la ingresas en el estao
   presionarBotonLogin = () => {
       if (this.state.dni==="medico@medictap.com" && this.state.password==="123") {
-        console.log(this.state.rol)
+        //console.log(this.state.rol)
+        localStorage.setItem("rol",this.state.rol); 
         this.props.history.push({
-          pathname: '/home/medico',
+          pathname: '/home',
           state: {
             rol: this.state.rol
           }
@@ -83,25 +85,28 @@ class Ingreso extends React.Component{
       });
 
     } else if (this.state.dni==="admin@medictap.com" && this.state.password==="123") {
-          console.log(this.state.rol1)
+          //console.log(this.state.rol1)
+          localStorage.setItem("rol",this.state.rol1); 
             this.props.history.push({
-              pathname: '/home/admin',
+              pathname: '/home',
               state: {
                 rol1: this.state.rol1
               }
           });
     }else if (this.state.dni==="secretaria@medictap.com" && this.state.password==="123"){
-          console.log(this.state.rol2)
+          //console.log(this.state.rol2)
+          localStorage.setItem("rol",this.state.rol2); 
             this.props.history.push({
-              pathname: '/home/secretaria',
+              pathname: '/home',
               state: {
                 rol: this.state.rol2
               }
             });
     }else if (this.state.dni==="paciente@medictap.com" && this.state.password==="123"){
-            console.log(this.state.rol3)
+            //console.log(this.state.rol3)
+            localStorage.setItem("rol",this.state.rol3); 
             this.props.history.push({
-              pathname: '/home/paciente',
+              pathname: '/home',
               state: {
                 rol: this.state.rol3
               }
@@ -109,6 +114,7 @@ class Ingreso extends React.Component{
     }else
     {
         this.setState({fallo: true})
+        localStorage.clear();
       }
   };
 

@@ -4,13 +4,13 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+//import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import Switch from '@material-ui/core/Switch';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
+//import Switch from '@material-ui/core/Switch';
+//import FormControlLabel from '@material-ui/core/FormControlLabel';
+//import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
 import SimpleMenu from './SimpleMenu';
 import { NavLink } from 'react-router-dom';
@@ -31,8 +31,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function MenuAppBar(props) {
-  const rol = props.rol;
+export default function MenuAppBar() {
+  const rol = localStorage.getItem("rol");
   const classes = useStyles();
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -56,8 +56,9 @@ export default function MenuAppBar(props) {
       <div className={classes.root}>
         <AppBar position="static" className={classes.root}>
           <Toolbar>
+            {rol}
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <SimpleMenu rol={rol}/>
+            <SimpleMenu/>
               {/*<MenuIcon />
               <div class="d-flex flex-row bd-highlight mb-3">
               <ul class="nav">
