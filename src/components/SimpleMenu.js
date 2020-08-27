@@ -133,7 +133,6 @@ export default function SimpleMenu() {
                     <MenuItem onClick={handleClose}><NavLink to={"/Home"}>Home</NavLink></MenuItem>
                     <MenuItem onClick={handleClose}><NavLink to={"/Perfil"}>Perfil</NavLink></MenuItem>
                     {/*Todos ven horarios menos pacientes*/}
-                    <MenuItem onClick={handleClose}><NavLink to={"/Horarios"}>Horarios</NavLink></MenuItem>
                     <MenuItem onClick={handleClose}><NavLink to={"/Turnos"}>Turnos</NavLink></MenuItem>
                     <MenuItem onClick={handleClose}><NavLink to={"/HistoriaClinica"}>Historia Clinica</NavLink></MenuItem>
                     <MenuItem onClick={handleClose}><NavLink to={"/Recetas"}>Recetas</NavLink></MenuItem>
