@@ -18,6 +18,8 @@ import { withStyles } from "@material-ui/core/styles";
 //import {withRouter} from 'react-router-dom';
 //import MiComponente from './MiComponente';
 //import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import axios from 'axios';
+
 
  
 
@@ -56,6 +58,8 @@ const useStyles = theme => ({
   backgroundColor: '#d4d4d4',
   },
 });
+
+
 class Ingreso extends React.Component{
   constructor(props){
     super(props);
@@ -70,10 +74,27 @@ class Ingreso extends React.Component{
       fallo: false,
     }
   }
+  handleSubmit = async (e) => {
+    e.preventDefault();
+
+  const dni = this.state.dni,
+  password = this.state.password;
+  try {
+    const response = await axios.post("/api/usuario/prueba", {
+      dni,
+      password
+    });
+    this.presionarBotonLogin(response);
+  } catch (err) {
+    console.log('Error');
+  }
+}
+
 
   //Capturar el mail y pwd cuando la ingresas en el estao
-  presionarBotonLogin = () => {
-      if (this.state.dni==="medico@medictap.com" && this.state.password==="123") {
+  presionarBotonLogin = (response) => {
+    alert(response.data)
+      if (this.state.dni==="95796910" && this.state.password==="Matteo") {
         //console.log(this.state.rol)
         localStorage.setItem("rol",this.state.rol); 
         this.props.history.push({
@@ -181,7 +202,7 @@ class Ingreso extends React.Component{
             variant="contained"
             color="secondary"
             className={classes.submit}
-            onClick={this.presionarBotonLogin}
+            onClick={this.handleSubmit}
           >
             Ingresar
           </Button>

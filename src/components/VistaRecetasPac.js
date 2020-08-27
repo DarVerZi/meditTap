@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import ComboBox from './ComboBox';
 import MenuAppBar from './MenuAppBar2';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,6 +17,12 @@ const useStyles = makeStyles((theme) => ({
       margin: theme.spacing(1),
     },
   }));
+
+  const handleButtonClick = () => {
+    axios.get("/api/usuario/prueba").then(function(response) {
+        alert(response.data)
+      });
+  };
   
   export default function VistaRecetasPac() {
     const classes = useStyles();
@@ -48,7 +55,7 @@ return (
   <div class="card-body">
     <h5 class="card-title">Gatritis</h5>
     <p class="card-text">Tratamiento para la gastritis.</p>
-    <button class="btn btn-danger btn-lg">Decargar</button>
+    <button class="btn btn-danger btn-lg" onClick={handleButtonClick}>Decargar</button>
   </div>
 </div></div>
 <div class="form-group col-md-6">

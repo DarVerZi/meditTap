@@ -40,6 +40,7 @@ export default function MenuAppBar() {
     setAuth(event.target.checked);
   };
 
+  
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
