@@ -1,10 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
+//import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import MenuAppBar from './MenuAppBar2';
+import Home1 from './Home1';
 
 const useStyles = makeStyles({
   root: {
@@ -19,9 +20,9 @@ const useStyles = makeStyles({
 });
 
 
-export default function MiPerfil(props) {
+export default function MiPerfil() {
 
-    const rol = props.rol;
+    const rol = localStorage.getItem("rol");
     const classes = useStyles();
 
     if(rol==="paciente") {
@@ -84,7 +85,7 @@ export default function MiPerfil(props) {
         );
     }
     
-    else {
+    else if(rol==="admin" || rol==="medico" ||  rol==="secretaria" )  {
 
         return (
             <div className={classes.root}>
@@ -152,4 +153,8 @@ export default function MiPerfil(props) {
             </div>
         );
     }
+    else {
+        return <Home1/>
+    }
+
 }

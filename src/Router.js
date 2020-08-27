@@ -11,8 +11,11 @@ import Registrar from './components/Registrar';
 import Home1 from './components/Home1';
 import Home2 from './components/Home2';
 import Footer from './components/Footer';
-//import MiPerfil from './components/MiPerfil';
+import MiPerfil from './components/MiPerfil';
+import VistaHorarios from './components/VistaHorarios';
 import Header from './components/Header';
+
+
 
 class Router extends Component {
     render() {
@@ -72,6 +75,21 @@ class Router extends Component {
                             </div>
                         );
                     }} />
+                    <Route exact path="/Perfil" render={() => {
+                        return (
+                            <div rol="content">
+                            <MiPerfil/>
+                            </div>
+                        );
+                    }} />
+                    <Route exact path="/Horarios" render={() => {
+                        return (
+                            <div rol="content">
+                            <VistaHorarios/>
+                            </div>
+                        );
+                    }} />
+
                     <Route exact path="/Login" component={Login} />
                     <Route exact path="/Registrar" component={Registrar} />
                     
