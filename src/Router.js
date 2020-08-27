@@ -12,7 +12,7 @@ import Home1 from './components/Home1';
 import Home2 from './components/Home2';
 import Footer from './components/Footer';
 import MiPerfil from './components/MiPerfil';
-import VistaHorarios from './components/VistaHorarios';
+import DiasSemana from './components/DiasSemana';
 import Header from './components/Header';
 
 
@@ -85,7 +85,7 @@ class Router extends Component {
                     <Route exact path="/Horarios" render={() => {
                         return (
                             <div rol="content">
-                            <VistaHorarios/>
+                            <DiasSemana/>
                             </div>
                         );
                     }} />
