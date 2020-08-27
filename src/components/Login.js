@@ -76,7 +76,7 @@ class Ingreso extends React.Component{
   }
   handleSubmit = async (e) => {
     e.preventDefault();
-
+   localStorage.setItem('dni',this.state.dni)
   const dni = this.state.dni,
   password = this.state.password;
   try {
