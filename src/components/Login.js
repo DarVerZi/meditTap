@@ -20,9 +20,6 @@ import { withStyles } from "@material-ui/core/styles";
 //import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
-
- 
-
 import {
   Redirect
 } from "react-router-dom";
@@ -74,6 +71,8 @@ class Ingreso extends React.Component{
       fallo: false,
     }
   }
+  
+  //valido que este el usuario
   handleSubmit = async (e) => {
     e.preventDefault();
    localStorage.setItem('dni',this.state.dni)
@@ -83,72 +82,30 @@ class Ingreso extends React.Component{
     const response = await axios.post("/api/usuario/prueba", {
       dni,
       password
-    });
-    this.presionarBotonLogin(response);
+    }  
+    );
+    const responserol = await axios.post("/api/usuarioRol/nombreRol", {
+      dni
+    }  
+    );
+    //no pude parsear responserol el texto hablar con Mary solo tenemos que tomar el rol
+    var cadena = '{"id": 4,"idRol": 4,"dni": 123,"estado": "A","nombreRol": "admin","createdAt": "2020-08-26T21:21:21.000Z", "updatedAt": "2020-08-26T21:21:21.000Z"}';
+    const dataR = JSON.parse(cadena);
+    this.presionarBotonLogin(dataR);
   } catch (err) {
     console.log('Error');
   }
 }
-
-
   //Capturar el mail y pwd cuando la ingresas en el estao
-  presionarBotonLogin = (response) => {
-    alert(response.data)
-      localStorage.setItem("dni", this.state.dni);
-      if (this.state.dni==="95796910" && this.state.password==="Matteo") {
-        //console.log(this.state.rol)
-        localStorage.setItem("rol",this.state.rol); 
-        this.props.history.push({
-          pathname: '/home',
-          state: {
-            rol: this.state.rol
-          }
-               
-      });
-      }
-      else if (this.state.dni==="234" && this.state.password==="medico") {
-        //console.log(this.state.rol)
-        localStorage.setItem("rol",this.state.rol); 
-        this.props.history.push({
-          pathname: '/home',
-          state: {
-            rol: this.state.rol
-          }
-               
-      });
-
-    } else if (this.state.dni==="123" && this.state.password==="admin") {
-          //console.log(this.state.rol1)
-          localStorage.setItem("rol",this.state.rol1); 
-            this.props.history.push({
-              pathname: '/home',
-              state: {
-                rol1: this.state.rol1
-              }
-          });
-    }else if (this.state.dni==="456" && this.state.password==="secretaria"){
-          //console.log(this.state.rol2)
-          localStorage.setItem("rol",this.state.rol2); 
-            this.props.history.push({
-              pathname: '/home',
-              state: {
-                rol: this.state.rol2
-              }
-            });
-    }else if (this.state.dni==="345" && this.state.password==="paciente"){
-            //console.log(this.state.rol3)
-            localStorage.setItem("rol",this.state.rol3); 
-            this.props.history.push({
-              pathname: '/home',
-              state: {
-                rol: this.state.rol3
-              }
-            });
-    }else
-    {
-        this.setState({fallo: true})
-        localStorage.clear();
-      }
+  presionarBotonLogin = (dataR) => {
+    alert(dataR.nombreRol)
+    localStorage.setItem("rol",dataR.nombreRol); 
+    this.props.history.push({
+        pathname: '/home',
+        state: {
+          rol: this.state.rol
+        }   
+    });
   };
 
  
