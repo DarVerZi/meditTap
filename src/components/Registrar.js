@@ -39,8 +39,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function SignUp() {
-  const classes = useStyles();
+    const classes = useStyles();
 
+    //valido que este el usuario
+ 
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
@@ -128,6 +130,7 @@ export default function SignUp() {
             variant="contained"
             color="secondary"
             className={classes.submit}
+            //onClick={this.handleSubmit}
           >
             Registrarse
           </Button>
