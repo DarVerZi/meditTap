@@ -1,71 +1,62 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import MenuAppBar from './MenuAppBar2';
 import axios from 'axios';
-/*
-class Perfil extends React.Component{
-    constructor(props){
-      super(props);
-      this.state = {
-        dni:"",
-        nombre: "",
-        apellido: "",
-        mail: "",
-        password: "",
-        fechaNacimiento: "",
-        genero: "",
-        domicilio: "",
-        TelefonoCel: "",
-        TelefonoPri: "",
-      }
-    }
-      handleSubmit = async (e) => {
-        e.preventDefault();
-       localStorage.setItem('dni',this.state.dni)
-      const dni = this.state.dni;
+import MenuAppBar from './MenuAppBar2';
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
-try {
-    const response = axios.get("/api/usuario/find/dni/:dni", {
-      dni,
-    });
-    this.presionarBotonPerfil(response);
-  } catch (err) {
-    console.log('Error');
-  }
-
-  presionarBotonPerfil = (response) => {
-    alert(response.data)
-        this.props.history.push({
-          pathname: '/Perfil',
-    }
-  }
-*/
-
-
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275
+    display: 'flex',
+    flexGrow: 1,
   },
-  title: {
-    fontSize: 14,
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
   },
-  pos: {
-    marginBottom: 12,
+  button: {
+    margin: theme.spacing(1),
   },
-});
+  formControl: {
+    margin: theme.spacing(3),
+  },
+  }));
+  
+
+class MiPerfil extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      nombre: "",
+      apellido: "",
+      dni: "",
+      fechaNacimiento: "",
+      domicilio: "",
+      mail: "",
+      TelefonoPri: "",
+      TelefonoCel: ""
+    }
+  }
+
+  buscarUsuario = async dni => {
+    let url = "/api/usuario/find/dni/"+dni;
+    let response = await axios.get(url)
+    return response.data;
+  }
+  
 
 
-export default function MiPerfil(props) {
+  submit(){
+    console.log(this.state)}
 
-    const rol = props.rol;
-    const classes = useStyles();
-
-    if(rol==="paciente") {
-
+  render(){
+    //const classes = useStyles();
+    const dni = localStorage.getItem("dni");
+    const rol = localStorage.getItem("rol");    
+    const { classes } = this.props;
+    const response = this.buscarUsuario(dni);
         return (
             <Card variant="outlined">
             <CardContent>        
@@ -73,27 +64,27 @@ export default function MiPerfil(props) {
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputNombre">Nombres</label>
-                        <input type="text" disabled="true" value='this.state.nombre' class="form-control" id="inputNombre"/>
+                        <input type="text" disabled="true" value={response.nombre} class="form-control" id="inputNombre"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputApellido">Apellidos</label>
-                        <input type="text" value="Vergara Zatti" class="form-control" id="inputApellido" disabled="true"/>
+                        <input type="text" value={response.apellido} class="form-control" id="inputApellido" disabled="true"/>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputDNI">Nro Documento</label>
-                        <input type="text" value="12345678" class="form-control" id="inputDNI" disabled="true"/>
+                        <input type="text" value={response.dni} class="form-control" id="inputDNI" disabled="true"/>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputFNac">Fecha de Nacimiento</label>
-                        <input type="text" value="22/01/1988" class="form-control" id="inputFNac" disabled="true"/>
+                        <input type="text" value={response.fechaNacimiento} class="form-control" id="inputFNac" disabled="true"/>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputGenero">Genero</label>
                         <select id="inputGenero" class="form-control" disabled="true">
-                            {/*<option selected>Seleccione...</option>*/}
-                            <option selected>Hombre</option>
+                            <option selected>Seleccione...</option>
+                            <option>Hombre</option>
                             <option>Mujer</option>
                         </select>
                     </div>
@@ -101,21 +92,21 @@ export default function MiPerfil(props) {
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputDomicilio">Domicilio</label>
-                        <input type="text" value="25 de Mayo 432, Moron" class="form-control" id="inputDomicilio" placeholder="Calle, número, depto, etc." disabled="true"/>
+                        <input type="text" value={response.domicilio} class="form-control" id="inputDomicilio" placeholder="Calle, número, depto, etc." disabled="true"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail">Email</label>
-                        <input type="email" value="dariovergara@gmail.com" class="form-control" id="inputEmail" disabled="true"/>
+                        <input type="email" value={response.mail} class="form-control" id="inputEmail" disabled="true"/>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputTelPrin">Telefono Principal</label>
-                        <input type="text" value="54 011 1234 5678" class="form-control" id="inputTelPrin" disabled="true"/>
+                        <input type="text" value={response.TelefonoPri} class="form-control" id="inputTelPrin" disabled="true"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputCel">Telefono Celular</label>
-                        <input type="text" value="54 911 1234 5678" class="form-control" id="inputCel" disabled="true"/>
+                        <input type="text" value={response.TelefonoCel} class="form-control" id="inputCel" disabled="true"/>
                     </div>
                 </div>
             </form>
@@ -123,73 +114,6 @@ export default function MiPerfil(props) {
     </Card>
         );
     }
-    
-    else {
-
-        return (
-            <div className={classes.root}>
-            <div className="container-fluid">
-                <div className="col-12">
-            <MenuAppBar/>
-            </div>
-            </div>
-            <div class="card">
-  <div class="card-body">       
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputNombre">Nombres</label>
-                        <input type="text" value="Dario Alberto" class="form-control" id="inputNombre"/>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputApellido">Apellidos</label>
-                        <input type="text" value="Vergara Zatti" class="form-control" id="inputApellido"/>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="inputDNI">Nro Documento</label>
-                        <input type="text" value="12345678" class="form-control" id="inputDNI"/>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputFNac">Fecha de Nacimiento</label>
-                        <input type="text" value="22/01/1988" class="form-control" id="inputFNac"/>
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputGenero">Genero</label>
-                        <select id="inputGenero" class="form-control">
-                            {/*<option selected>Seleccione...</option>*/}
-                            <option selected>Hombre</option>
-                            <option>Mujer</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputDomicilio">Domicilio</label>
-                        <input type="text" value="25 de Mayo 432, Moron" class="form-control" id="inputDomicilio" placeholder="Calle, número, depto, etc."/>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputEmail">Email</label>
-                        <input type="email" value="dariovergara@gmail.com" class="form-control" id="inputEmail"/>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputTelPrin">Telefono Principal</label>
-                        <input type="text" value="54 011 1234 5678" class="form-control" id="inputTelPrin"/>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="inputCel">Telefono Celular</label>
-                        <input type="text" value="54 911 1234 5678" class="form-control" id="inputCel"/>
-                    </div>
-                </div>
-            </form>
-        <Button type="submit" class="btn btn-danger btn-sm">Guardar</Button>
-    <br></br>
-    </div>
-            </div>
-            </div>
-        );
-    }
 }
+
+export default MiPerfil;

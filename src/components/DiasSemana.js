@@ -3,26 +3,7 @@ import StartTime from './ComboBox-Horario';
 import EndTime from './ComboBoxFin';
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios';
-import MenuAppBar from './MenuAppBar2';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  button: {
-    margin: theme.spacing(1),
-  },
-  formControl: {
-    margin: theme.spacing(3),
-  },
-  }));
-  
+ 
 
 class MultiCheckBox extends React.Component{
   constructor(){
@@ -31,7 +12,10 @@ class MultiCheckBox extends React.Component{
       fecha: [],
       idMedico: 1,
       horas:"9:00",
-      fin:"12:00"
+      fin:"12:00",
+    }
+    this.datos = {
+      opciones: []
     }
   }
 
@@ -67,31 +51,25 @@ class MultiCheckBox extends React.Component{
   }
 }
 
+
+ 
+
   submit(){
     console.log(this.state)}
 
   render(){
     //const classes = useStyles();
+    const id = localStorage.getItem("dni");
     const rol = localStorage.getItem("rol");
     return(
       //<div className={classes.root}>
-      <div className="container-fluid">
-        <div className="row">
-          {/* Barra con menú y logout */}
-          <div className="col-12">
-            <MenuAppBar/>
-            <br></br>
-          </div>
-          <div className="col-12"><h2>Disponibilidad de Turnos</h2></div>
-          {/* Buscador de pacientes */}
-          <div className="col-12">
+      
               <form>
               <div class="form-row">
-            <div class="form-row">
               <div class="form-group col-md-4">
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" name="daysOfWeek" id="inlineCheckboxh1" value={1} onChange={this.handleInputChange.bind(this)}/>
-                  <label class="form-check-label" for="inlineCheckboxh1">Lunes</label>
+                  <label class="form-check-label" for="inlineCheckboxh1" fontSize="12pt">Lunes</label>
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" name="daysOfWeek" id="inlineCheckboxh2" value={2} onChange={this.handleInputChange.bind(this)}/>
@@ -122,12 +100,7 @@ class MultiCheckBox extends React.Component{
                     </div>
                     </div>
             <button class="btn btn-danger btn-lg" type="submit" onClick={this.handleSubmit}>Aceptar</button>
-          </div>
         </form>
-        </div>
-                  </div>
-              </div>
-      //</div>
     )
   }
 }

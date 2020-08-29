@@ -94,6 +94,7 @@ class Ingreso extends React.Component{
   //Capturar el mail y pwd cuando la ingresas en el estao
   presionarBotonLogin = (response) => {
     alert(response.data)
+      localStorage.setItem("dni", this.state.dni);
       if (this.state.dni==="95796910" && this.state.password==="Matteo") {
         //console.log(this.state.rol)
         localStorage.setItem("rol",this.state.rol); 
