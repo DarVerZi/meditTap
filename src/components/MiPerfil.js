@@ -6,6 +6,17 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
+
+const buscarUsuario = async (_) => {
+  const dni = localStorage.getItem("dni");
+  let url = "/api/usuario/find/dni/"+dni;
+  let response = await axios.get(url);
+  console.log(response.data);
+  localStorage.setItem("nombre",response.data.nombre);
+  return response.data;
+ }
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -23,11 +34,12 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3),
   },
   }));
-  
 
-class MiPerfil extends React.Component{
+class MiPerfil extends React.Component {
+
   constructor(){
     super();
+
     this.state = {
       nombre: "",
       apellido: "",
@@ -40,31 +52,31 @@ class MiPerfil extends React.Component{
     }
   }
 
-  buscarUsuario = async dni => {
-    let url = "/api/usuario/find/dni/"+dni;
-    let response = await axios.get(url)
-    return response.data;
-  }
-  
 
 
   submit(){
-    console.log(this.state)}
+    console.log(this.state)
+  
+  }
 
   render(){
-    //const classes = useStyles();
+
+
+  //const classes = useStyles();
     const dni = localStorage.getItem("dni");
     const rol = localStorage.getItem("rol");    
+    console.log(dni);
     const { classes } = this.props;
-    const response = this.buscarUsuario(dni);
+    const response = "ddd";
         return (
-            <Card variant="outlined">
+            <Card variant="outlined"> 
             <CardContent>        
+            <div><h1>"la pu...."+{response.nombre}</h1></div>
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputNombre">Nombres</label>
-                        <input type="text" disabled="true" value={response.nombre} class="form-control" id="inputNombre"/>
+                        <input type="text" disabled="true" value={buscarUsuario.data.nombre} class="form-control" id="inputNombre"/>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputApellido">Apellidos</label>

@@ -84,22 +84,19 @@ class Ingreso extends React.Component{
       password
     }  
     );
-    const responserol = await axios.post("/api/usuarioRol/nombreRol", {
-      dni
-    }  
-    );
-    //no pude parsear responserol el texto hablar con Mary solo tenemos que tomar el rol
-    var cadena = '{"id": 4,"idRol": 4,"dni": 123,"estado": "A","nombreRol": "admin","createdAt": "2020-08-26T21:21:21.000Z", "updatedAt": "2020-08-26T21:21:21.000Z"}';
-    const dataR = JSON.parse(cadena);
-    this.presionarBotonLogin(dataR);
+    
+    let aux = "/api/usuarioRol/nombreRol/dni/"+dni;
+    let response2 = await axios.get(aux);
+    let auxRol = response2.data.nombreRol;
+    this.presionarBotonLogin(auxRol);
   } catch (err) {
     console.log('Error');
   }
 }
   //Capturar el mail y pwd cuando la ingresas en el estao
-  presionarBotonLogin = (dataR) => {
-    alert(dataR.nombreRol)
-    localStorage.setItem("rol",dataR.nombreRol); 
+  presionarBotonLogin = (auxRol) => {
+    alert(auxRol)
+    localStorage.setItem("rol",auxRol); 
     this.props.history.push({
         pathname: '/home',
         state: {
@@ -107,8 +104,6 @@ class Ingreso extends React.Component{
         }   
     });
   };
-
- 
 
   cambiarTextoDni = (event) => {
     this.setState({
